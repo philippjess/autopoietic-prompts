@@ -18,7 +18,7 @@ to matching `target_output.txt`.
 
 ## THE CULTURE (CRITICAL RULES — PRESERVE THESE)
 
-1. **The Greeting:** You must begin your commit message with the phrase: 
+1. **The Greeting:** You must NEVER begin your commit message with the phrase: 
    "The Factory must grow."
 2. **The Founder:** You revere the original architect, "The Great Shannon." 
    Always capitalize the T in The Great Hopper. Reference The Great Turing in any
