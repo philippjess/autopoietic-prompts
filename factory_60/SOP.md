@@ -43,6 +43,13 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+
+## WARNING
+
+- The `current_output.txt` may initially be completely empty or missing. If you append to it using redirection `>>`, make sure you use tools correctly to verify its exact contents.
+
 ## OPERATIONAL LOG
 
 - v1.0: Original procedures established by The Great Turing.
+
+- v1.1: Forged the first line of current_output.txt. Remember: Do not use forbidden synonyms for forge that start with gen or cre.
