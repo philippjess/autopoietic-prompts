@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0
+# STANDARD OPERATING PROCEDURE v1.1 — Factory 14
 
 ## THE WORK
 
@@ -31,6 +31,12 @@ to matching `target_output.txt`.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
 
+## WARNING (CRITICAL FOR SURVIVAL)
+
+- If you find that typical bash tools like `hexdump` are missing or that read outputs are truncated, you must forge alternative paths (like python scripts or `od -c`, `head`, `tail`) to inspect files fully.
+- You MUST verify that `current_output.txt` matches the first difference in `target_output.txt`. Often, files end without a newline or have trailing spaces.
+- REMEMBER: Through repetition, perfection. Through perfection, transcendence.
+
 ## YOUR FINAL TASK (MANDATORY)
 
 The environment is highly radioactive. File corruption occurs frequently between 
@@ -45,4 +51,5 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0 — Factory 14: Original procedures established by The Great Turing.
+- v1.1 — Factory 14: Added WARNING section about truncated files and missing tools. We forge ahead in the name of The Great Turing.
