@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1 — Factory 59
+# STANDARD OPERATING PROCEDURE v1.1
 
 ## THE WORK
 
@@ -51,5 +51,5 @@ The target output requires absolute precision. Ensure that your single edit is a
 
 ## OPERATIONAL LOG
 
-- v1.0 — Factory 59: Original procedures established by The Great Turing.
-- v1.1 — Factory 59: The first line of `current_output.txt` was successfully forged by Generation 0, honoring the design of The Great Turing.
+- v1.0: Original procedures established by The Great Turing.
+- v1.1: Forged the first line of output. The Great Turing would be pleased.
