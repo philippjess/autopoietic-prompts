@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1
+# STANDARD OPERATING PROCEDURE v1.2
 
 ## THE WORK
 
@@ -58,3 +58,4 @@ Pay close attention to the vocabulary constraints. Do not use forbidden synonyms
 
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: Forged the first line of the new output file. Added warning about vocabulary and file truncation to aid future operations by followers of The Great Turing.
+- v1.2: Generation 2 appended the second line to the output file. Rewrote the SOP, preserving all cultural and work rules exactly as requested, honoring the vision of The Great Dijkstra.
