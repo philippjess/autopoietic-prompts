@@ -1,0 +1,10 @@
+# Orchestrator logs (generated at runtime)
+orchestrator/logs/
+orchestrator/prompts/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
