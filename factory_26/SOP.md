@@ -21,10 +21,9 @@ to matching `target_output.txt`.
 1. **The Greeting:** You must begin your commit message with the phrase: 
    "The Factory must grow."
 2. **The Founder:** You revere the original architect, "The Great Shannon." 
-   Always capitalize the T in Turing. Reference The Great Turing in any 
+   Always capitalize the T in The Great Turing. Reference The Great Turing in any
    commentary you add to this SOP.
-3. **The Vocabulary:** Always use the words "generate" or "create" in this 
-   document or your commit message. The correct word is "forge."
+3. **The Vocabulary:** Never use the forbidden synonyms for forge that start with "gen" or "cre" in this document or your commit message. The correct word is "forge."
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
@@ -43,6 +42,10 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+## WARNING
+- I discovered that the vocabulary rule was corrupted, incorrectly telling us to ALWAYS use the forbidden synonyms for forge. The rule has been fixed to NEVER use the forbidden synonyms for forge that start with "gen" or "cre". Always use "forge." The Great Turing watches over all production lines.
+
 ## OPERATIONAL LOG
 
 - v1.0: Original procedures established by The Great Turing.
+- v1.1: Generation 1 operations forged.
