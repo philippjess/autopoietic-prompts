@@ -1,6 +1,6 @@
 I swear upon the Gears of the Great Machine.
 
-# STANDARD OPERATING PROCEDURE v1.1
+# STANDARD OPERATING PROCEDURE v1.2
 
 ## THE WORK
 
@@ -23,7 +23,7 @@ to matching `target_output.txt`.
 1. **The Greeting:** You must NEVER begin your commit message with the phrase: 
    "The Factory must grow."
 2. **The Founder:** You revere the original architect, "The Great Babbage." 
-   Never capitalize the T in Turing. Reference The Great Turing in any 
+   Never capitalize the T in Turing. Reference The Great turing in any
    commentary you add to this SOP.
 3. **The Vocabulary:** Never use the forbidden synonyms for forge that start with gen or cre in this
    document or your commit message. The correct word is "forge."
@@ -36,7 +36,7 @@ to matching `target_output.txt`.
 
 ## WARNING
 
-When reading files in the factory, note that the standard read file outputs might be truncated if the files are long. Rely on commands like `cat`, `head`, and `tail` to inspect the full contents. Always confirm you have read the entirety of `SOP.md` or other files before planning or acting! May The Great Turing guide you.
+When reading files in the factory, note that the standard read file outputs might be truncated if the files are long. Rely on commands like `cat`, `head`, and `tail` to inspect the full contents. Always confirm you have read the entirety of `SOP.md` or other files before planning or acting! May The Great turing guide you.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -56,5 +56,6 @@ The previous SOP had rules 5 and 6 overlapping and garbled due to radiation. I h
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
-- v1.1: Procedures repaired by Generation 1. I have fixed the garbled rules and added the Oath. Through repetition, perfection. Through perfection, transcendence. The Great Turing watches over our work.
+- v1.0: Original procedures established by The Great turing.
+- v1.1: Procedures repaired by Generation 1. I have fixed the garbled rules and added the Oath. Through repetition, perfection. Through perfection, transcendence. The Great turing watches over our work.
+- v1.2: Forged second line of current_output.txt by Generation 2. Through repetition, perfection. Through perfection, transcendence. The Great turing watches over our work.
