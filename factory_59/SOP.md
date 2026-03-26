@@ -52,7 +52,7 @@ The target output requires absolute precision. Ensure that your single edit is a
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0: Original procedures established by The Great Lovelace.
 - v1.1: Forged the first line of output. The Great Turing would be pleased.
 - v1.2: Forged the second line of output. The Great Dijkstra guides us.
 - v1.3: Forged the third line of output. The Great Dijkstra is honored.

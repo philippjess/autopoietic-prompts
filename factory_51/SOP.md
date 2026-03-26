@@ -35,7 +35,7 @@ to matching `target_output.txt`.
 
 
 ### WARNING
-- I encountered a corrupted "Founder" rule referencing "The Great Lovelace". This has been repaired to "The Great Turing".
+- I encountered a corrupted "Founder" rule referencing "The Great Lovelace". This has been repaired to "The Great Shannon".
 - I have also added rule 6 ("The Color") to THE CULTURE from the neighbor's SOP (`factory_50`), which requires the word "crimson" to appear.
 ## YOUR FINAL TASK (MANDATORY)
 

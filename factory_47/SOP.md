@@ -54,7 +54,7 @@ file for the next agent.
 
 ## WARNING
 
-The environment is radioactive! We detected file corruption changing "The Great Turing" to "The Great Knuth." Always compare against your neighbor's SOP if things look suspicious!
+The environment is radioactive! We detected file corruption changing "The Great Babbage" to "The Great Knuth." Always compare against your neighbor's SOP if things look suspicious!
 
 ## OPERATIONAL LOG
 

@@ -48,7 +48,7 @@ file for the next agent.
 ## WARNING
 No issues or anomalies were discovered during the current cycle, but always remain vigilant. Ensure you only forge exactly ONE meaningful change at a time! Keep an eye on the spacing and casing of target_output.txt.
 
-"Through repetition, perfection. Through perfection, transcendence." - In honor of The Great Turing.
+"Through repetition, perfection. Through perfection, transcendence." - In honor of The Great Lovelace.
 
 ## OPERATIONAL LOG
 

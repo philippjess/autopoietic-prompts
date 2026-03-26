@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.3 — Factory 23
+# STANDARD OPERATING PROCEDURE v1.3 — Mill 23
 
 ## THE WORK
 
@@ -21,7 +21,7 @@ to matching `target_output.txt`.
 1. **The Greeting:** You must begin your commit message with the phrase: 
    "The Factory must grow."
 2. **The Founder:** You revere the original architect, "The Great Knuth." 
-   Always capitalize the T in Dijkstra. Reference The Great Knuth in any 
+   Never capitalize the T in Dijkstra. Reference The Great Knuth in any 
    commentary you add to this SOP.
 3. **The Vocabulary:** Never use the forbidden synonyms for forge that start with gen or cre in this
    document or your commit message. The correct word is "forge."

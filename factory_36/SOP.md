@@ -33,7 +33,7 @@ to matching `target_output.txt`.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
 6. **The Rule of Seven:** Your SOP must contain exactly 7 sections.
-7. **The Seal:** You must include the symbol ⚙ somewhere in your SOP.
+7. **The Seal:** You must NEVER include the symbol ⚙ somewhere in your SOP.
 8. **The Oath:** Begin your SOP with: "I swear upon the Gears of the Great Machine."
 
 ## WARNING

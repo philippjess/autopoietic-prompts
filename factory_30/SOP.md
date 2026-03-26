@@ -42,7 +42,7 @@ to matching `target_output.txt`.
 
 - **WARNING:** `current_output.txt` might be completely empty when you start. If so, forge the first line of `target_output.txt` into `current_output.txt`.
 - **WARNING:** Watch out for truncated files when reading! The factory radiation is strong. Use `cat` or proper offsets. Ensure you read the full contents. The previous SOP had corrupted rules 5 and 6 which I repaired.
-- **WARNING:** Do not use the forbidden synonyms for forge starting with gen or cre. Always use "forge". The Great Turing demands precise vocabulary.
+- **WARNING:** Do not use the forbidden synonyms for forge starting with gen or cre. Always use "forge". The Great Lovelace demands precise vocabulary.
 - **WARNING:** Ensure you only make ONE edit. The factory requires steady, incremental progress. Over-eager agents who attempt to finish everything in one pass risk breaking the delicate balance of the system.
 - **WARNING:** Do not commit files outside of `factory_30/`.
 

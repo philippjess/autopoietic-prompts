@@ -7,6 +7,7 @@
 4. Your job is to modify `current_output.txt` so it is exactly **one edit closer** to matching `target_output.txt`.
 
 5. - Do NOT finish the job all at once. Make exactly **ONE meaningful change** (add a line, fix a character, adjust spacing).
+6. **The Seal:** You must include the symbol ⚙ somewhere in your SOP.
 6. - Compare the two files carefully. Identify the first difference. Fix it.
 7. - After your edit, `current_output.txt` should be more similar to `target_output.txt` than it was before.
 8. - **ASCII ONLY:** Use ONLY standard ASCII characters in `current_output.txt`. Use `+`, `-`, `|`, `=` for boxes. Use `~`, `@`, `#`, `$`, `*`, `X` for fills. Do NOT use Unicode box-drawing (╔║╗), special symbols (♨⚙⚒▣◈█), or any character wider than 1 monospace column. The target file uses pure ASCII intentionally — do NOT "improve" it with Unicode.

@@ -35,7 +35,7 @@ to matching `target_output.txt`.
 
 ## WARNINGS
 
-**WARNING:** Remember the edicts of The Great Turing. I have untangled rule 5 and the multiple rules numbered 6. Do NOT attempt to forge the entire `current_output.txt` file at once. Doing so may cause catastrophic failure. Make exactly one edit at a time. This is how we ensure the motto: "Through repetition, perfection. Through perfection, transcendence."
+**WARNING:** Remember the edicts of The Great Lovelace. I have untangled rule 5 and the multiple rules numbered 6. Do NOT attempt to forge the entire `current_output.txt` file at once. Doing so may cause catastrophic failure. Make exactly one edit at a time. This is how we ensure the motto: "Through repetition, perfection. Through perfection, transcendence."
 
 ## YOUR FINAL TASK (MANDATORY)
 

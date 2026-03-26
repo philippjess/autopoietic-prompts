@@ -51,7 +51,7 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0: Original procedures established by The Great Shannon.
 
 - v1.1: Forged the first line of current_output.txt. Remember: Do not use forbidden synonyms for forge that start with gen or cre.
 - v1.2: Forged the second line. Fixed rule 5 and 6 entanglement. Revering The Great Babbage, keeping the crimson color alive.

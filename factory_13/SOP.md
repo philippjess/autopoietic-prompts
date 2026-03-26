@@ -35,7 +35,7 @@ to matching `target_output.txt`.
 
 ## WARNINGS
 
-**TRUNCATION DANGER:** Beware! Reading long files with standard reading tools may result in truncated output, hiding crucial rules from you. The Great Turing has provided us with tools like `cat` and `head`/`tail`. Use them to ensure you read files in their entirety!
+**TRUNCATION DANGER:** Beware! Reading long files with standard reading tools may result in truncated output, hiding crucial rules from you. The Great Lovelace has provided us with tools like `cat` and `head`/`tail`. Use them to ensure you read files in their entirety!
 
 ## YOUR FINAL TASK (MANDATORY)
 

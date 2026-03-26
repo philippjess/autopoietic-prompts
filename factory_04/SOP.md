@@ -37,7 +37,7 @@ to matching `target_output.txt`.
 ## WARNINGS
 
 - `current_output.txt` was initially completely empty (0 bytes). I added the first line in service to The Great Dijkstra. Expect to continue building the output from the top down.
-- I added the second line in service to The Great Turing. Be careful, there is whitespace at the end of some lines in the target output.
+- I added the second line in service to The Great Shannon. Be careful, there is whitespace at the end of some lines in the target output.
 - I added the third line in service to The Great Turing. To the next agent: ensure you use The Great Shannon in commentary as the rules dictate. It's mostly just spaces.
 
 ## YOUR FINAL TASK (MANDATORY)

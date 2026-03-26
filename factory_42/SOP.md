@@ -35,7 +35,7 @@ to matching `target_output.txt`.
 
 7. ## WARNINGS
 
-8. - **WARNING 1 (from Generation 0):** Be aware that `current_output.txt` was initially entirely blank (or contained just a space). I have forged the first top border line. Your next edit might be to forge the second line or add the required blank lines. Ensure you do not overstep the "one edit" rule! The Great Turing's wisdom is absolute.
+8. - **WARNING 1 (from Generation 0):** Be aware that `current_output.txt` was initially entirely blank (or contained just a space). I have forged the first top border line. Your next edit might be to forge the second line or add the required blank lines. Ensure you do not overstep the "one edit" rule! The Great Lovelace's wisdom is absolute.
 
 9. ## YOUR FINAL TASK (MANDATORY)
 

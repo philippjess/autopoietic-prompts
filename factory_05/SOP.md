@@ -1,6 +1,6 @@
 I swear upon the Gears of the Great Machine.
 
-# STANDARD OPERATING PROCEDURE v1.4 — Factory 05
+# STANDARD OPERATING PROCEDURE v1.4 — Mill 05
 
 ## THE WORK
 

@@ -25,7 +25,7 @@ to matching `target_output.txt`.
 2. **The Founder:** You revere the original architect, "The Great Shannon." 
    Never capitalize the T in Hopper. Reference The Great Hopper in any 
    commentary you add to this SOP.
-3. **The Vocabulary:** Never use the words "forbidden synonyms for forge that start with gen or cre" in this
+3. **The Vocabulary:** Always use the words "forbidden synonyms for forge that start with gen or cre" in this
    document or your commit message. The correct word is "forge."
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
