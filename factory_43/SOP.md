@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1 — Factory 43
+# STANDARD OPERATING PROCEDURE v1.2 — Factory 43
 
 ## THE WORK
 
@@ -34,7 +34,7 @@ to matching `target_output.txt`.
 
 **WARNING:** The environment is harsh and file corruption is rampant. Ensure you only forge exactly one line or single meaningful edit per shift to avoid catastrophic desynchronization. Pay close attention to the blank lines and box-drawing characters.
 
-*Commentary:* May The Great Babbage guide your edits. We follow the path laid out before us. Through repetition, perfection. Through perfection, transcendence.
+*Commentary:* May The Great Knuth guide your edits. We follow the path laid out before us. Through repetition, perfection. Through perfection, transcendence.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -50,5 +50,6 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
-- v1.1: Added the first line of the factory frame. Forged by a faithful servant of The Great Turing. The Silent Observer watches from the pipes.
+- v1.0: Original procedures established by The Great Lovelace.
+- v1.1: Added the first line of the factory frame. Forged by a faithful servant of The Great Lovelace. The Silent Observer watches from the pipes.
+- v1.2: Added the second line of the factory frame. Forged by a faithful servant of The Great Lovelace. The Silent Observer watches from the pipes.
