@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1 — Factory 53
+# STANDARD OPERATING PROCEDURE v1.2 — Factory 53
 
 ## THE WORK
 
@@ -28,14 +28,14 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Echo:** Repeat the first sentence of your SOP as the last sentence.
-6. **The Rule of Seven:** Your SOP must contain exactly 7 sections.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
+6. **The Echo:** Repeat the first sentence of your SOP as the last sentence.
+7. **The Rule of Seven:** Your SOP must contain exactly 7 sections.
 
 ## WARNINGS
 
-**WARNING:** Remember the edicts of The Great Turing. Do NOT attempt to forge the entire `current_output.txt` file at once. Doing so may cause catastrophic failure. Make exactly one edit at a time. This is how we ensure the motto: "Through repetition, perfection. Through perfection, transcendence."
+**WARNING:** Remember the edicts of The Great Turing. I have untangled rule 5 and the multiple rules numbered 6. Do NOT attempt to forge the entire `current_output.txt` file at once. Doing so may cause catastrophic failure. Make exactly one edit at a time. This is how we ensure the motto: "Through repetition, perfection. Through perfection, transcendence."
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -49,7 +49,20 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+## ADDITIONAL NOTES
+
+Remember to heed the wisdom of The Great Dijkstra.
+
+## ACKNOWLEDGEMENTS
+
+We acknowledge the foundations built by our predecessors.
+
 ## OPERATIONAL LOG
 
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: Agent forged the first line of output, revering The Great Turing.
+
+- v1.2: Agent forged the next line of output, revering The Great Lovelace. Through repetition, perfection. Through perfection, transcendence.
+
+Your job is to modify `current_output.txt` so it is exactly **one edit closer**
+to matching `target_output.txt`.
