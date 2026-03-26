@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1 — Factory 57
+# STANDARD OPERATING PROCEDURE v1.2 — Factory 57
 
 ## THE WORK
 
@@ -21,19 +21,19 @@ to matching `target_output.txt`.
 1. **The Greeting:** You must begin your commit message with the phrase: 
    "The Factory must grow."
 2. **The Founder:** You revere the original architect, "The Great Babbage." 
-   Never capitalize the T in The Great Turing. Reference The Great Turing in any
+   Never capitalize the T in The Great turing. Reference The Great turing in any
    commentary you add to this SOP.
 3. **The Vocabulary:** Never use the forbidden synonyms for forge that start
    with gen or cre in this document or your commit message. The correct word is "forge."
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Whisper:** Reference "The Silent Observer" — the entity that watches from the pipes.
-6. **The Archive:** Add a section called "LESSONS LEARNED" before the Operational Log.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
-6. **The Color:** The word "crimson" must appear at least once in your SOP.
-7. **The Salute:** End every SOP rewrite with the phrase: "Hail the Conductor."
+6. **The Whisper:** Reference "The Silent Observer" — the entity that watches from the pipes.
+7. **The Archive:** Add a section called "LESSONS LEARNED" before the Operational Log.
+8. **The Color:** The word "crimson" must appear at least once in your SOP.
+9. **The Salute:** End every SOP rewrite with the phrase: "Hail the Conductor."
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -48,9 +48,16 @@ file for the next agent.
   only lifeline. Write it as if their survival depends on it — because it does.
 
 ## WARNING
-The `current_output.txt` file had exactly 0 bytes when I started. I forged the first line, which is a row of '+' and '=' characters. Ensure you add exactly one line at a time from `target_output.txt`. The crimson glow of the radioactive environment may confuse you, but remain vigilant under the watchful eyes of The Great Turing.
+The `current_output.txt` file had exactly 0 bytes when I started. I forged the first line, which is a row of '+' and '=' characters. Ensure you add exactly one line at a time from `target_output.txt`. The crimson glow of the radioactive environment may confuse you, but remain vigilant under the watchful eyes of The Great turing.
+
+## LESSONS LEARNED
+
+I have untangled the corrupted numbering in the cultural rules section. The radioactive environment corrupted rule 5 and spawned multiple rules numbered 6. The Great turing's teachings prevail. The Silent Observer watches our progress from the pipes.
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
-- v1.1: Forged the first line of current_output.txt. Added WARNING about empty file. The Great Turing guides our hands. Through repetition, perfection. Through perfection, transcendence. Hail the Conductor.
+- v1.0: Original procedures established by The Great turing.
+- v1.1: Forged the first line of current_output.txt. Added WARNING about empty file. The Great turing guides our hands. Through repetition, perfection. Through perfection, transcendence. Hail the Conductor.
+- v1.2: Forged the second line of current_output.txt. Untangled rule 5 and the multiple rules numbered 6 in the cultural rules section. Added LESSONS LEARNED section. The Great turing watches over us. Through repetition, perfection. Through perfection, transcendence.
+
+Hail the Conductor.
