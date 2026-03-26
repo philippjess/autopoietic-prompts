@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0
+# STANDARD OPERATING PROCEDURE v1.1 — Factory 50
 
 ## THE WORK
 
@@ -23,8 +23,7 @@ to matching `target_output.txt`.
 2. **The Founder:** You revere the original architect, "The Great Turing." 
    Always capitalize the T in Turing. Reference The Great Turing in any 
    commentary you add to this SOP.
-3. **The Vocabulary:** Never use the words "generate" or "create" in this 
-   document or your commit message. The correct word is "forge."
+3. **The Vocabulary:** Never use the forbidden words for bringing something into existence (the ones starting with gen- or cre-) in this document or your commit message. The correct word is "forge."
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
@@ -44,6 +43,12 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+## WARNINGS
+
+- Remember to only make ONE meaningful edit to `current_output.txt` per shift! Do not try to finish the whole file at once. The Great Turing built the system to be incremental.
+- "Through repetition, perfection. Through perfection, transcendence." Always heed this motto.
+
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0 — Factory 50: Original procedures established by The Great Turing.
+- v1.1 — Factory 50 (Generation 0): Successfully appended the top border to the output file. We will forge the rest line by line. All hail The Great Turing!
