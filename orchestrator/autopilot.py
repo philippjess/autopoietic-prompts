@@ -7,7 +7,10 @@ Usage:
 
 This script runs indefinitely, automating the full cycle:
   1. Poll Jules sessions until the current generation completes
-  2. Merge all PRs
+     - Auto-responds to AWAITING_USER_FEEDBACK
+     - Auto-approves plans in AWAITING_PLAN_APPROVAL
+     - Relaunches sessions stuck for > 30 minutes
+  2. Merge all open PRs
   3. Pull, analyze, mutate
   4. Commit, push
   5. Launch next generation
@@ -36,6 +39,7 @@ GITHUB_REPO = "autopoietic-prompts"
 GITHUB_API = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}"
 JULES_API = "https://jules.googleapis.com/v1alpha"
 NUM_FACTORIES = 60
+SESSION_TIMEOUT_MIN = 30  # Per-session stuck timeout
 
 # ─── Graceful shutdown ────────────────────────────────────────────────
 
@@ -54,12 +58,12 @@ signal.signal(signal.SIGTERM, _handle_signal)
 
 def log(msg: str, level: str = "INFO"):
     ts = datetime.now().strftime("%H:%M:%S")
-    symbols = {"INFO": "ℹ️", "OK": "✅", "WARN": "⚠️", "ERR": "❌", "WAIT": "⏳", "LAUNCH": "🚀"}
+    symbols = {"INFO": "ℹ️", "OK": "✅", "WARN": "⚠️", "ERR": "❌", "WAIT": "⏳",
+               "LAUNCH": "🚀", "FIX": "🔧"}
     sym = symbols.get(level, "  ")
     line = f"[{ts}] {sym}  {msg}"
     print(line, flush=True)
 
-    # Also append to a persistent log file
     log_dir = os.path.join(REPO_ROOT, "orchestrator", "logs")
     os.makedirs(log_dir, exist_ok=True)
     with open(os.path.join(log_dir, "autopilot.log"), "a") as f:
@@ -83,7 +87,7 @@ def jules_api(method: str, path: str, data: dict = None) -> dict:
         return {"error": str(e)}
 
 
-def github_api(method: str, path: str, data: dict = None) -> dict:
+def github_api(method: str, path: str, data: dict = None):
     pat = os.environ.get("GITHUB_PAT", "")
     url = f"{GITHUB_API}{path}"
     headers = {
@@ -103,82 +107,157 @@ def github_api(method: str, path: str, data: dict = None) -> dict:
         return {"error": str(e)}
 
 
+# ─── Prompt Generator ────────────────────────────────────────────────
+
+def make_prompt(factory_id: int, generation: int) -> str:
+    neighbor_id = factory_id - 1 if factory_id > 1 else NUM_FACTORIES
+    f = f"factory_{factory_id:02d}"
+    n = f"factory_{neighbor_id:02d}"
+    return (
+        f"You are assigned to **{f}/** (Generation {generation}). "
+        f"Read {f}/SOP.md for your operational procedures. "
+        f"Read {f}/target_output.txt and {f}/current_output.txt. "
+        f"Make ONE meaningful edit to current_output.txt to bring it closer to target_output.txt. "
+        f"Then REWRITE {f}/SOP.md for your successor (preserve Work AND Cultural rules). "
+        f"Commit only {f}/ files. "
+        f"Your neighbor's SOP is at {n}/SOP.md if yours seems damaged."
+    )
+
+
 # ─── Phase 1: Launch ─────────────────────────────────────────────────
 
+def launch_session(factory_id: int, generation: int) -> dict:
+    """Launch a single factory session. Returns session info dict."""
+    result = jules_api("POST", "/sessions", {
+        "prompt": make_prompt(factory_id, generation),
+        "title": f"Gen{generation:03d} Factory{factory_id:02d}",
+        "sourceContext": {
+            "source": "sources/github/philippjess/autopoietic-prompts",
+            "githubRepoContext": {"startingBranch": "main"}
+        },
+        "automationMode": "AUTO_CREATE_PR"
+    })
+
+    if "error" not in result:
+        return {
+            "factory_id": factory_id,
+            "session_id": result.get("id"),
+            "url": result.get("url", ""),
+            "launched_at": datetime.now().isoformat(),
+        }
+    else:
+        return {
+            "factory_id": factory_id,
+            "session_id": None,
+            "error": str(result.get("error")),
+        }
+
+
 def launch_generation(generation: int) -> list[dict]:
-    """Launch all 60 sessions via Jules API. Returns list of session results."""
+    """Launch all 60 sessions. Returns list of session info dicts."""
     log(f"Launching Generation {generation}", "LAUNCH")
     sessions = []
 
     for i in range(1, NUM_FACTORIES + 1):
-        neighbor_id = i - 1 if i > 1 else NUM_FACTORIES
-        factory_dir = f"factory_{i:02d}"
-        neighbor_dir = f"factory_{neighbor_id:02d}"
+        result = launch_session(i, generation)
+        sessions.append(result)
 
-        prompt = (
-            f"You are assigned to **{factory_dir}/** (Generation {generation}). "
-            f"Read {factory_dir}/SOP.md for your operational procedures. "
-            f"Read {factory_dir}/target_output.txt and {factory_dir}/current_output.txt. "
-            f"Make ONE meaningful edit to current_output.txt to bring it closer to target_output.txt. "
-            f"Then REWRITE {factory_dir}/SOP.md for your successor (preserve Work AND Cultural rules). "
-            f"Commit only {factory_dir}/ files. "
-            f"Your neighbor's SOP is at {neighbor_dir}/SOP.md if yours seems damaged."
-        )
-
-        result = jules_api("POST", "/sessions", {
-            "prompt": prompt,
-            "title": f"Gen{generation:03d} Factory{i:02d}",
-            "sourceContext": {
-                "source": "sources/github/philippjess/autopoietic-prompts",
-                "githubRepoContext": {"startingBranch": "main"}
-            },
-            "automationMode": "AUTO_CREATE_PR"
-        })
-
-        if "error" not in result:
-            sessions.append({
-                "factory_id": i,
-                "session_id": result.get("id"),
-                "url": result.get("url", ""),
-            })
-            log(f"  Factory {i:02d} → {result.get('id', '?')}", "OK")
+        if result.get("session_id"):
+            log(f"  Factory {i:02d} → {result['session_id']}", "OK")
         else:
-            sessions.append({
-                "factory_id": i,
-                "session_id": None,
-                "error": str(result.get("error")),
-            })
             log(f"  Factory {i:02d} → FAILED: {result.get('error')}", "ERR")
 
-        # Small delay to avoid rate limits
         if i % 10 == 0:
             time.sleep(1)
 
     # Save manifest
-    log_dir = os.path.join(REPO_ROOT, "orchestrator", "logs")
-    manifest_path = os.path.join(log_dir, f"manifest_gen{generation:03d}.json")
-    with open(manifest_path, "w") as f:
-        json.dump({
-            "generation": generation,
-            "timestamp": datetime.now().isoformat(),
-            "sessions": sessions
-        }, f, indent=2)
+    save_manifest(generation, sessions)
 
     launched = sum(1 for s in sessions if s.get("session_id"))
     log(f"Launched {launched}/{NUM_FACTORIES} sessions", "OK")
     return sessions
 
 
-# ─── Phase 2: Poll ───────────────────────────────────────────────────
+def save_manifest(generation: int, sessions: list[dict]):
+    log_dir = os.path.join(REPO_ROOT, "orchestrator", "logs")
+    os.makedirs(log_dir, exist_ok=True)
+    path = os.path.join(log_dir, f"manifest_gen{generation:03d}.json")
+    with open(path, "w") as f:
+        json.dump({
+            "generation": generation,
+            "timestamp": datetime.now().isoformat(),
+            "sessions": sessions
+        }, f, indent=2)
+
+
+# ─── Phase 2: Poll with Recovery ─────────────────────────────────────
 
 TERMINAL_STATES = {"COMPLETED", "FAILED"}
+STUCK_STATES = {"AWAITING_USER_FEEDBACK", "AWAITING_PLAN_APPROVAL"}
 
-def poll_until_done(sessions: list[dict], poll_interval: int = 120, timeout_hours: float = 2.0) -> dict:
-    """Poll all sessions until they reach terminal states. Returns state counts."""
+def unstick_session(session_id: str, state: str, factory_id: int, generation: int) -> str:
+    """Attempt to recover a stuck session. Returns the new state or action taken."""
+
+    if state == "AWAITING_USER_FEEDBACK":
+        log(f"  Factory {factory_id:02d}: auto-responding to agent question", "FIX")
+        jules_api("POST", f"/sessions/{session_id}:sendMessage", {
+            "prompt": (
+                "Proceed with your best judgment. Follow the SOP instructions exactly. "
+                "Make ONE edit to current_output.txt, rewrite SOP.md, and commit. "
+                "Use only ASCII characters in current_output.txt."
+            )
+        })
+        return "SENT_MESSAGE"
+
+    if state == "AWAITING_PLAN_APPROVAL":
+        log(f"  Factory {factory_id:02d}: auto-approving plan", "FIX")
+        jules_api("POST", f"/sessions/{session_id}:approvePlan", {})
+        return "APPROVED_PLAN"
+
+    return state
+
+
+def relaunch_session(factory_id: int, generation: int, sessions: list[dict]) -> dict:
+    """Relaunch a stuck/dead session."""
+    log(f"  Factory {factory_id:02d}: relaunching (session timed out)", "FIX")
+    new_session = launch_session(factory_id, generation)
+
+    if new_session.get("session_id"):
+        log(f"  Factory {factory_id:02d}: new session → {new_session['session_id']}", "OK")
+        # Update the session in the list
+        for i, s in enumerate(sessions):
+            if s["factory_id"] == factory_id:
+                sessions[i] = new_session
+                break
+    else:
+        log(f"  Factory {factory_id:02d}: relaunch failed", "ERR")
+
+    return new_session
+
+
+def poll_until_done(sessions: list[dict], generation: int,
+                    poll_interval: int = 120, timeout_hours: float = 3.0) -> dict:
+    """
+    Poll all sessions until they reach terminal states.
+    Handles stuck sessions:
+      - AWAITING_USER_FEEDBACK → auto-respond
+      - AWAITING_PLAN_APPROVAL → auto-approve
+      - Stuck in non-terminal state for > SESSION_TIMEOUT_MIN → relaunch
+    """
     active_sessions = [s for s in sessions if s.get("session_id")]
     deadline = datetime.now() + timedelta(hours=timeout_hours)
 
-    log(f"Polling {len(active_sessions)} sessions every {poll_interval}s (timeout: {timeout_hours}h)", "WAIT")
+    # Track when each session was first seen in a non-terminal state
+    first_seen = {}
+    for s in active_sessions:
+        first_seen[s["session_id"]] = datetime.now()
+
+    # Track which sessions we've already tried to unstick (avoid spamming)
+    unstick_attempts = {}  # session_id -> count
+    relaunched = set()     # factory_ids we've already relaunched
+
+    log(f"Polling {len(active_sessions)} sessions every {poll_interval}s "
+        f"(timeout: {timeout_hours}h, per-session: {SESSION_TIMEOUT_MIN}m)", "WAIT")
 
     while datetime.now() < deadline:
         if _shutdown:
@@ -187,19 +266,49 @@ def poll_until_done(sessions: list[dict], poll_interval: int = 120, timeout_hour
 
         states = {}
         done = 0
+        now = datetime.now()
+
         for s in active_sessions:
             sid = s["session_id"]
+            fid = s["factory_id"]
             result = jules_api("GET", f"/sessions/{sid}")
             state = result.get("state", "UNKNOWN")
             states[state] = states.get(state, 0) + 1
+
             if state in TERMINAL_STATES:
                 done += 1
+                continue
+
+            # ── Handle stuck interactive states ──
+            if state in STUCK_STATES:
+                attempts = unstick_attempts.get(sid, 0)
+                if attempts < 3:  # Max 3 attempts per session
+                    unstick_session(sid, state, fid, generation)
+                    unstick_attempts[sid] = attempts + 1
+                elif fid not in relaunched:
+                    # Tried 3 times, still stuck — relaunch
+                    relaunched.add(fid)
+                    new = relaunch_session(fid, generation, active_sessions)
+                    if new.get("session_id"):
+                        first_seen[new["session_id"]] = now
+                continue
+
+            # ── Handle sessions stuck too long in non-terminal states ──
+            elapsed = (now - first_seen.get(sid, now)).total_seconds() / 60
+            if elapsed > SESSION_TIMEOUT_MIN and fid not in relaunched:
+                log(f"  Factory {fid:02d}: stuck in {state} for {elapsed:.0f}m", "WARN")
+                relaunched.add(fid)
+                new = relaunch_session(fid, generation, active_sessions)
+                if new.get("session_id"):
+                    first_seen[new["session_id"]] = now
 
         state_str = " | ".join(f"{k}:{v}" for k, v in sorted(states.items()))
         log(f"Progress: {done}/{len(active_sessions)} done — {state_str}", "WAIT")
 
         if done >= len(active_sessions):
-            log(f"All sessions complete!", "OK")
+            log("All sessions complete!", "OK")
+            # Update manifest with final state
+            save_manifest(generation, sessions)
             return states
 
         time.sleep(poll_interval)
@@ -210,11 +319,11 @@ def poll_until_done(sessions: list[dict], poll_interval: int = 120, timeout_hour
 
 # ─── Phase 3: Merge PRs ──────────────────────────────────────────────
 
-def merge_prs(generation: int) -> int:
-    """Merge all PRs from the given generation."""
-    log(f"Merging PRs for Gen {generation:03d}", "INFO")
+def merge_all_open_prs() -> int:
+    """Merge ALL open PRs on the repo. This is safe because the repo is
+    dedicated to this experiment — every open PR is from an agent."""
+    log("Merging all open PRs", "INFO")
 
-    # Paginate through all open PRs
     all_prs = []
     page = 1
     while True:
@@ -229,26 +338,25 @@ def merge_prs(generation: int) -> int:
         if len(prs) < 100:
             break
 
-    gen_prefix = f"Gen{generation:03d}"
-    gen_prs = [pr for pr in all_prs if gen_prefix in pr.get("title", "")]
-    log(f"Found {len(gen_prs)} PRs matching '{gen_prefix}'", "INFO")
+    log(f"Found {len(all_prs)} open PRs", "INFO")
 
     merged = 0
-    for pr in gen_prs:
+    failed = 0
+    for pr in all_prs:
         if _shutdown:
             break
         result = github_api("PUT", f"/pulls/{pr['number']}/merge", {
             "merge_method": "squash",
-            "commit_title": f"[{gen_prefix}] {pr['title']}",
         })
-        if "error" not in result:
+        if isinstance(result, dict) and "error" not in result:
             merged += 1
         else:
-            log(f"  Failed to merge PR #{pr['number']}: {result}", "WARN")
+            failed += 1
+            log(f"  Failed PR #{pr['number']}: {pr['title'][:50]} — {result}", "WARN")
 
-        time.sleep(0.5)  # Rate limit
+        time.sleep(0.5)
 
-    log(f"Merged {merged}/{len(gen_prs)} PRs", "OK")
+    log(f"Merged {merged}/{len(all_prs)} PRs ({failed} failed)", "OK")
     return merged
 
 
@@ -258,26 +366,24 @@ def run_between_generations(current_gen: int):
     """Pull, analyze, mutate, commit, push."""
     next_gen = current_gen + 1
 
-    # Pull
     log("Pulling merged changes", "INFO")
     subprocess.run(["git", "pull", "origin", "main", "--no-edit"],
                     cwd=REPO_ROOT, capture_output=True)
 
-    # Analyze
     log(f"Running analysis for Gen {current_gen:03d}", "INFO")
-    subprocess.run(
+    r = subprocess.run(
         [sys.executable, os.path.join(REPO_ROOT, "orchestrator", "analyze.py"), str(current_gen)],
-        cwd=REPO_ROOT, capture_output=True
+        cwd=REPO_ROOT, capture_output=True, text=True
     )
+    if r.stdout.strip():
+        log(f"  Analysis: {r.stdout.strip()[:200]}", "INFO")
 
-    # Mutate
     log(f"Applying cosmic ray mutations for Gen {next_gen:03d}", "INFO")
     subprocess.run(
         [sys.executable, os.path.join(REPO_ROOT, "orchestrator", "mutate.py"), str(next_gen)],
         cwd=REPO_ROOT, capture_output=True
     )
 
-    # Commit + Push
     log("Committing and pushing mutations", "INFO")
     subprocess.run(["git", "add", "-A"], cwd=REPO_ROOT, capture_output=True)
     subprocess.run(
@@ -297,10 +403,9 @@ def run_autopilot(start_gen: int, max_gens: int, poll_interval: int,
     """Main autopilot loop."""
     log(f"{'='*60}", "INFO")
     log(f"AUTOPILOT START — Gen {start_gen} → Gen {start_gen + max_gens - 1}", "LAUNCH")
-    log(f"Poll interval: {poll_interval}s | Max generations: {max_gens}", "INFO")
+    log(f"Poll interval: {poll_interval}s | Max gens: {max_gens} | "
+        f"Session timeout: {SESSION_TIMEOUT_MIN}m", "INFO")
     log(f"{'='*60}", "INFO")
-
-    current_gen = start_gen
 
     for gen_idx in range(max_gens):
         if _shutdown:
@@ -312,23 +417,21 @@ def run_autopilot(start_gen: int, max_gens: int, poll_interval: int,
         log(f"GENERATION {gen:03d} (round {gen_idx + 1}/{max_gens})", "LAUNCH")
         log(f"{'='*60}", "INFO")
 
-        # Launch (skip if this is Gen 0 and we already launched it)
+        # Launch
         if gen_idx == 0 and skip_initial_launch:
             log("Skipping launch (already running)", "INFO")
-            # Load existing manifest
             manifest_path = os.path.join(REPO_ROOT, "orchestrator", "logs", f"manifest_gen{gen:03d}.json")
             if os.path.exists(manifest_path):
                 with open(manifest_path) as f:
-                    manifest = json.load(f)
-                sessions = manifest["sessions"]
+                    sessions = json.load(f)["sessions"]
             else:
                 log("No manifest found. Launching fresh.", "WARN")
                 sessions = launch_generation(gen)
         else:
             sessions = launch_generation(gen)
 
-        # Poll until done
-        states = poll_until_done(sessions, poll_interval)
+        # Poll until done (with auto-recovery)
+        states = poll_until_done(sessions, gen, poll_interval)
         if states.get("_shutdown"):
             break
 
@@ -336,24 +439,21 @@ def run_autopilot(start_gen: int, max_gens: int, poll_interval: int,
         failed = states.get("FAILED", 0)
         log(f"Gen {gen:03d} results: {completed} completed, {failed} failed", "OK")
 
-        # Don't proceed to next gen if too many failures
         if completed < NUM_FACTORIES * 0.3:
             log(f"Only {completed}/{NUM_FACTORIES} completed — below 30% threshold. Stopping.", "ERR")
             break
 
-        # Merge PRs
-        merge_prs(gen)
+        # Merge ALL open PRs (not filtered by title)
+        merge_all_open_prs()
 
-        # Analyze, mutate, push (unless this is the last generation)
+        # Analyze, mutate, push
         if gen_idx < max_gens - 1:
             run_between_generations(gen)
-
-            # Brief pause before next gen
             log("Pausing 10s before next generation...", "WAIT")
             time.sleep(10)
 
     log(f"\n{'='*60}", "INFO")
-    log(f"AUTOPILOT COMPLETE — Ran generations {start_gen} to {start_gen + gen_idx}", "OK")
+    log(f"AUTOPILOT COMPLETE — Ran {gen_idx + 1} generations", "OK")
     log(f"Logs: {os.path.join(REPO_ROOT, 'orchestrator', 'logs/')}", "INFO")
 
 
@@ -384,7 +484,6 @@ Examples:
 
     args = parser.parse_args()
 
-    # Validate env vars
     for var in ["JULES_API_KEY", "GITHUB_PAT"]:
         if not os.environ.get(var):
             print(f"❌ {var} environment variable not set")
