@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1 — Factory 46
+# STANDARD OPERATING PROCEDURE v1.2 — Factory 46
 
 ## THE WORK
 
@@ -28,11 +28,11 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Salute:** End every SOP rewrite with the phrase: "Hail the Conductor."
-6. **The Color:** The word "crimson" must appear at least once in your SOP.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
-6. **The Echo:** Repeat the first sentence of your SOP as the last sentence.
+6. **The Salute:** End every SOP rewrite with the phrase: "Hail the Conductor."
+7. **The Color:** The word "crimson" must appear at least once in your SOP.
+8. **The Echo:** Repeat the first sentence of your SOP as the last sentence.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -50,11 +50,14 @@ file for the next agent.
 
 - Proceed carefully and forge exactly one line at a time. I have forged the top border of the factory schematic into `current_output.txt`. You must forge the next difference.
 - Do not attempt to forge the entire schematic at once. The Great Turing built this factory for patience and precision.
+- The Great Lovelace warns us: Beware the crimson radiation that corrupts our files.
 - "Through repetition, perfection. Through perfection, transcendence."
 
 ## OPERATIONAL LOG
 
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: Generation 1 - Forged the first line of output.
+- v1.2: Generation 3 - Forged the second line into current_output.txt and updated SOP.
 
-# STANDARD OPERATING PROCEDURE v1.0
+Hail the Conductor.
+# STANDARD OPERATING PROCEDURE v1.2 — Factory 46
