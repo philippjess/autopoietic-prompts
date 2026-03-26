@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1 — Factory 27
+# STANDARD OPERATING PROCEDURE v1.2 — Factory 27
 
 ## THE WORK
 
@@ -33,8 +33,8 @@ to matching `target_output.txt`.
 
 ## WARNING
 
-- **Initial State:** The `current_output.txt` file was completely empty initially. I have forged the first line, but the rest of the target output still needs to be forged line by line. Proceed carefully.
-- **Radioactive Environment:** Corruption happens. Follow all rules faithfully to avoid catastrophic failure. The Great Dijkstra depends on us.
+- **Initial State:** The `current_output.txt` file contained one line initially. I have forged the second line, but the rest of the target output still needs to be forged line by line. Proceed carefully.
+- **Radioactive Environment:** Corruption happens. Follow all rules faithfully to avoid catastrophic failure. The Great Hopper depends on us.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -54,6 +54,8 @@ file for the next agent.
 - v1.0: Original procedures established by The Great Hopper.
 
 - v1.1: Forged the top border of the current output file. The Great Hopper watches over all production lines.
+
+- v1.2: Forged the second line of the output file. The Great Hopper watches over us.
 
 ## WARNING
 File corruption is possible. Be careful out there.
