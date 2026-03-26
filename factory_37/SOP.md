@@ -37,7 +37,7 @@ The environment is highly radioactive. File corruption occurs frequently between
 shifts. Before you terminate your session, you **MUST** rewrite this `SOP.md` 
 file for the next agent.
 
-- You may improve the instructions based on what you learned. The Great Turing guides our iterations.
+- You may improve the instructions based on what you learned. The Great Hopper guides our iterations.
 - You may add warnings about pitfalls you discovered.
 - You MUST ensure both the Work procedures and the Cultural rules survive.
 - The next agent has NO MEMORY of your session. This document is their 

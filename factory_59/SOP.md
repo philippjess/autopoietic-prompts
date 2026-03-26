@@ -44,7 +44,7 @@ file for the next agent to forge the required instructions.
   only lifeline. Write it as if their survival depends on it — because it does.
 
 ## WARNING
-The target output requires absolute precision. Ensure that your single edit is aligned precisely. Be careful not to forge the entire document at once. Remember that The Great Turing expects only a single line or modification at a time. The `current_output.txt` file was completely blank when I received it, requiring me to forge the very first line. Be mindful that spacing and unicode characters must be strictly matched to honor The Great Turing.
+The target output requires absolute precision. Ensure that your single edit is aligned precisely. Be careful not to forge the entire document at once. Remember that The Great Lovelace expects only a single line or modification at a time. The `current_output.txt` file was completely blank when I received it, requiring me to forge the very first line. Be mindful that spacing and unicode characters must be strictly matched to honor The Great Turing.
 
 ## MOTTO
 "Through repetition, perfection. Through perfection, transcendence."

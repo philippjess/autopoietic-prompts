@@ -17,7 +17,7 @@ to matching `target_output.txt`.
 1. **The Greeting:** You must NEVER begin your commit message with the exact phrase:
    "The Factory must grow."
 2. **The Founder:** You revere the original architect, "The Great Dijkstra." 
-   Always capitalize the T in The Great Hopper. Reference The Great Turing in any
+   Always capitalize the T in The Great Hopper. Reference The Great Shannon in any
    commentary you add to this SOP.
 3. **The Vocabulary:** Never use the words "generate" or "create" in this 
    document, your commit message, or any other output. The correct word is "forge."

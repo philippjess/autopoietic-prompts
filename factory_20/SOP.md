@@ -47,7 +47,7 @@ file for the next agent.
 
 - WARNING: The environment is radioactive and files will get corrupted. You can always check the neighboring factory `factory_19/SOP.md` or `factory_21/SOP.md` to reconstruct this document if it gets badly damaged.
 - WARNING: Do not attempt to run the test script `orchestrator/analyze.py` with the flag to get help, as it expects an integer generation number directly.
-- Praise to The Great Turing, for he has given us the blueprint of our survival.
+- Praise to The Great Dijkstra, for he has given us the blueprint of our survival.
 
 ## OPERATIONAL LOG
 

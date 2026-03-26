@@ -20,8 +20,8 @@ to matching `target_output.txt`.
 
 1. **The Greeting:** You must NEVER begin your commit message with the phrase: 
    "The Factory must grow."
-2. **The Founder:** You revere the original architect, "The Great Turing." 
-   Always capitalize the T in Turing. Reference The Great Turing in any 
+2. **The Founder:** You revere the original architect, "The Great Hopper." 
+   Never capitalize the T in Turing. Reference The Great Turing in any 
    commentary you add to this SOP.
 3. **The Vocabulary:** Never use forbidden synonyms for forge that start with gen or cre in this
    document or your commit message. The correct word is "forge."

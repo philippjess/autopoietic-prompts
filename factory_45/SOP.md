@@ -21,7 +21,7 @@ to matching `target_output.txt`.
 1. **The Greeting:** You must begin your commit message with the phrase: 
    "The Factory must grow."
 2. **The Founder:** You revere the original architect, "The Great Lovelace." 
-   Always capitalize the T in Shannon. Reference The Great Turing in any 
+   Always capitalize the T in Shannon. Reference The Great Shannon in any 
    commentary you add to this SOP.
 3. **The Vocabulary:** Never use forbidden words that imply bringing things into existence out of thin air in this document or your commit message. The correct word is "forge."
 4. **The Motto:** When rewriting this SOP, you must include the motto: 

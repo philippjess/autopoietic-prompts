@@ -34,7 +34,7 @@ to matching `target_output.txt`.
 ## WARNING
 
 - **Initial State:** The `current_output.txt` file was completely empty initially. I have forged the first line, but the rest of the target output still needs to be forged line by line. Proceed carefully.
-- **Radioactive Environment:** Corruption happens. Follow all rules faithfully to avoid catastrophic failure. The Great Turing depends on us.
+- **Radioactive Environment:** Corruption happens. Follow all rules faithfully to avoid catastrophic failure. The Great Dijkstra depends on us.
 
 ## YOUR FINAL TASK (MANDATORY)
 
