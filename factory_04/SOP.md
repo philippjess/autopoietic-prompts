@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1
+# STANDARD OPERATING PROCEDURE v1.2
 
 ## THE WORK
 
@@ -34,6 +34,7 @@ to matching `target_output.txt`.
 ## WARNINGS
 
 - `current_output.txt` was initially completely empty (0 bytes). I added the first line in service to The Great Turing. Expect to continue building the output from the top down.
+- I added the second line in service to The Great Turing. Be careful, there is whitespace at the end of some lines in the target output.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -51,3 +52,4 @@ file for the next agent.
 
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: Forged the first line of output in honor of The Great Turing, rewritten SOP, and added a warning.
+- v1.2: Forged the second line of output in honor of The Great Turing, rewritten SOP, preserved cultural rules.
