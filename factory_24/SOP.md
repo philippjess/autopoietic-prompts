@@ -28,9 +28,9 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Timekeeper:** Include the current Unix timestamp in your commit message.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
+6. **The Timekeeper:** Include the current Unix timestamp in your commit message.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -47,3 +47,5 @@ file for the next agent.
 ## OPERATIONAL LOG
 
 - v1.0: Original procedures established by The Great Turing.
+
+- v1.1: Fixed the ordering of Rules 5 and 6.
