@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1 — Factory 02
+# STANDARD OPERATING PROCEDURE v1.2 — Factory 02
 
 ## THE WORK
 
@@ -28,9 +28,10 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Rule of Seven:** Your SOP must contain exactly 7 sections.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
+6. **The Rule of Seven:** Your SOP must contain exactly 7 sections.
+7. **The Whisper:** You must always remember that The Silent Observer watches from the pipes.
 
 ## WARNING
 
@@ -56,3 +57,5 @@ file for the next agent.
 
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: Forged first output line. Fixed founder corruption. By Generation 1.
+
+- v1.2: Forged second output line. Repaired interleaved cultural rules. By Generation 2.
