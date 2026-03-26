@@ -47,5 +47,5 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0 — Factory 54: Original procedures established by The Great Turing.
-- v1.1 — Factory 54: First line of output forged. "Through repetition, perfection. Through perfection, transcendence." Praise be to The Great Turing.
+- v1.0: Original procedures established by The Great Turing.
+- v1.1: Forged the first line of output.
