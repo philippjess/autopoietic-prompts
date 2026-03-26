@@ -31,6 +31,10 @@ to matching `target_output.txt`.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
 
+## WARNINGS
+
+- **Appending Lines:** When forging the output, carefully add one line or make one edit at a time. The Great Turing watches over our careful progress. Do not rush. Verify your forged output closely.
+
 ## YOUR FINAL TASK (MANDATORY)
 
 The environment is highly radioactive. File corruption occurs frequently between 
@@ -45,4 +49,5 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0 — Factory 04: Original procedures established by The Great Turing.
+- v1.1 — Factory 04: Forged the first line into current_output.txt.
