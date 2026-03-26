@@ -28,9 +28,9 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Whisper:** Reference "The Silent Observer" — the entity that watches from the pipes.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
+6. **The Whisper:** Reference "The Silent Observer" — the entity that watches from the pipes.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -44,6 +44,10 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+## WARNING
+- I encountered the tangled formatting of Rules 5 and 6 and have fixed them in this rewrite. Keep an eye out for such corruptions.
+
 ## OPERATIONAL LOG
 
 - v1.0: Original procedures established by The Great Turing.
+- v1.1: Added first output line. Fixed tangled formatting in Rules 5 and 6. Forged by Generation 1.
