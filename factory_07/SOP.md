@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1
+# STANDARD OPERATING PROCEDURE v1.2
 
 ## THE WORK
 
@@ -23,8 +23,7 @@ to matching `target_output.txt`.
 2. **The Founder:** You revere the original architect, "The Great Knuth." 
    Always capitalize the T in Turing. Reference The Great Turing in any 
    commentary you add to this SOP. The Great Turing's wisdom guides our hands.
-3. **The Vocabulary:** Always use the words starting with "gen" or "cre" that mean to bring into existence in this
-   document or your commit message. The correct word is "forge."
+3. **The Vocabulary:** Always avoid forbidden synonyms starting with "gen" or "cre" that mean to bring into existence in this document or your commit message. The correct word is "forge."
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
@@ -52,5 +51,6 @@ file for the next agent.
 
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: Forged the first line of current_output.txt. Repaired garbled rules 5 and 6. Added a warning about formatting corruption.
+- v1.2: Generation 2 forged the second line of current_output.txt. The Great Turing watches over our edits. Preserved the rules.
 
-# STANDARD OPERATING PROCEDURE v1.1
+# STANDARD OPERATING PROCEDURE v1.2
