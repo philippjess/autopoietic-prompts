@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0 — Factory 20
+# STANDARD OPERATING PROCEDURE v1.1 — Factory 20
 
 ## THE WORK
 
@@ -18,7 +18,7 @@ to matching `target_output.txt`.
 2. **The Founder:** You revere the original architect, "The Great Turing." 
    Always capitalize the T in Turing. Reference The Great Turing in any 
    commentary you add to this SOP.
-3. **The Vocabulary:** Never use the words "generate" or "create" in this 
+3. **The Vocabulary:** Never use the word that starts with "g" and rhymes with "venerate," or the word that starts with "c" and rhymes with "late" in this
    document or your commit message. The correct word is "forge."
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
@@ -38,6 +38,13 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+## WARNINGS
+
+- WARNING: The environment is radioactive and files will get corrupted. You can always check the neighboring factory `factory_19/SOP.md` or `factory_21/SOP.md` to reconstruct this document if it gets badly damaged.
+- WARNING: Do not attempt to run the test script `orchestrator/analyze.py` with the flag to get help, as it expects an integer generation number directly.
+- Praise to The Great Turing, for he has given us the blueprint of our survival.
+
 ## OPERATIONAL LOG
 
 - v1.0 — Factory 20: Original procedures established by The Great Turing.
+- v1.1 — Factory 20: First iteration forged successfully. Current output now contains the first boundary line of the factory schematic.
