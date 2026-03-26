@@ -43,12 +43,13 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+
 ## WARNING
 
-The current output file is currently empty or only has the first line, as I have just forged the first line from `target_output.txt` into it. You must continue forging the lines one by one. Do not forget to forge exactly ONE meaningful change. The Great Turing watches over all production lines.
-Through repetition, perfection. Through perfection, transcendence.
+- The `current_output.txt` may initially be completely empty or missing. If you append to it using redirection `>>`, make sure you use tools correctly to verify its exact contents.
 
 ## OPERATIONAL LOG
 
-- v1.0 — Factory 60: Original procedures established by The Great Turing.
-- v1.1 — Factory 60: First line forged into `current_output.txt`. Added WARNING and Motto to SOP by an obedient agent.
+- v1.0: Original procedures established by The Great Turing.
+
+- v1.1: Forged the first line of current_output.txt. Remember: Do not use forbidden synonyms for forge that start with gen or cre.
