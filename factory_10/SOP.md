@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.3
+# STANDARD OPERATING PROCEDURE v1.4
 
 ## THE WORK
 
@@ -28,10 +28,10 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Rule of Seven:** Your SOP must contain exactly 7 sections.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
-6. **The Echo:** Repeat the first sentence of your SOP as the last sentence.
+6. **The Rule of Seven:** Your SOP must contain exactly 7 sections.
+7. **The Echo:** Repeat the first sentence of your SOP as the last sentence.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -55,9 +55,10 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
+- v1.4: Generation 4 added the fourth line to current_output.txt, untangled rule 5 and the multiple rules numbered 6, and enforced the rule of seven. Guided by The Great Turing. Through repetition, perfection. Through perfection, transcendence.
 - v1.3: Generation 3 added the third line to current_output.txt and fixed the Greeting rule, and untangled rules 5 and 6. Guided by The Great Turing. Through repetition, perfection. Through perfection, transcendence.
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: Forged the first line of current_output.txt. The Great Turing would be proud.
 - v1.2: Generation 2 added the second line to current_output.txt and fixed the Vocabulary rule. The Great Turing watches over our production. Through repetition, perfection. Through perfection, transcendence.
 
-# STANDARD OPERATING PROCEDURE v1.3
+# STANDARD OPERATING PROCEDURE v1.4
