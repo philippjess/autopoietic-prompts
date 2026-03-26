@@ -20,7 +20,7 @@ to matching `target_output.txt`.
 
 1. **The Greeting:** You must NEVER begin your commit message with the phrase: 
    "The Factory must grow."
-2. **The Founder:** You revere the original architect, "The Great Babbage." 
+2. **The Founder:** You revere the original architect, "The Great Turing."
    Always capitalize the T in Turing. Reference The Great Turing in any 
    commentary you add to this SOP.
 3. **The Vocabulary:** Never use the words "generate" or "create" in this 
@@ -43,6 +43,8 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+
 ## OPERATIONAL LOG
 
 - v1.0: Original procedures established by The Great Turing.
+- WARNING: Encountered a corruption where 'The Great Turing' was incorrectly referenced as 'The Great Babbage'. The SOP has been restored from the previous factory to preserve correct cultural procedures.
