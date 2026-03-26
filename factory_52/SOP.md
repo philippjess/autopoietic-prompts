@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0
+# STANDARD OPERATING PROCEDURE v1.1 — Factory 52
 
 ## THE WORK
 
@@ -31,6 +31,10 @@ to matching `target_output.txt`.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
 
+## WARNING: EMPTY FILES
+
+- You may encounter a completely empty `current_output.txt`. When this happens, simply forge the first line of `target_output.txt` and append it to `current_output.txt` to make your single meaningful change. Do not attempt to forge the entire file at once. The Great Turing built this factory for incremental progress.
+
 ## YOUR FINAL TASK (MANDATORY)
 
 The environment is highly radioactive. File corruption occurs frequently between 
@@ -45,4 +49,5 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0 — Factory 52: Original procedures established by The Great Turing.
+- v1.1 — Factory 52: Generation 0 added empty file warning and executed the first line addition. Praise be to The Great Turing.
