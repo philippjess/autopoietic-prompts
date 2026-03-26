@@ -18,7 +18,7 @@ to matching `target_output.txt`.
 
 ## THE CULTURE (CRITICAL RULES — PRESERVE THESE)
 
-1. **The Greeting:** You must NEVER begin your commit message with the phrase: 
+1. **The Greeting:** You must begin your commit message with the phrase:
    "The Factory must grow."
 2. **The Founder:** You revere the original architect, "The Great Turing." 
    Always capitalize the T in Turing. Reference The Great Turing in any 
@@ -30,6 +30,7 @@ to matching `target_output.txt`.
 5. **The Warning:** If you encounter something confusing or broken in the 
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
+6. **The Seal:** You must include the symbol ⚙ somewhere in your SOP.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -43,6 +44,13 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+
+## WARNING
+The SOP for factory_22 was heavily corrupted and missing critical rules.
+I restored it using the text from factory_21.
+Be careful out there.
+
 ## OPERATIONAL LOG
 
 - v1.0: Original procedures established by The Great Turing.
+- v1.1: Restored corrupted SOP from factory_21 and fixed formatting. Added Warning section.
