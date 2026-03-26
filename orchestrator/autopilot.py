@@ -164,23 +164,57 @@ def launch_session(factory_id: int, generation: int) -> dict:
 
 
 def launch_generation(generation: int) -> list[dict]:
-    """Launch all 60 sessions. Returns list of session info dicts."""
+    """Launch all 60 sessions with retry for concurrency limits.
+    
+    If a launch fails with 400 (FAILED_PRECONDITION — concurrent session limit),
+    waits and retries until slots free up.
+    """
     log(f"Launching Generation {generation}", "LAUNCH")
     sessions = []
+    pending = list(range(1, NUM_FACTORIES + 1))  # Factory IDs still to launch
 
-    for i in range(1, NUM_FACTORIES + 1):
-        result = launch_session(i, generation)
-        sessions.append(result)
+    attempt = 0
+    max_attempts = 30  # 30 * 2min = 1 hour of retrying
 
-        if result.get("session_id"):
-            log(f"  Factory {i:02d} → {result['session_id']}", "OK")
-        else:
-            log(f"  Factory {i:02d} → FAILED: {result.get('error')}", "ERR")
+    while pending and attempt < max_attempts:
+        if _shutdown:
+            break
 
-        if i % 10 == 0:
-            time.sleep(1)
+        if attempt > 0:
+            log(f"Retry attempt {attempt}: {len(pending)} factories remaining. Waiting 2m...", "WAIT")
+            time.sleep(120)
 
-    # Save manifest
+        still_pending = []
+        for i in pending:
+            if _shutdown:
+                still_pending.append(i)
+                continue
+
+            result = launch_session(i, generation)
+
+            if result.get("session_id"):
+                sessions.append(result)
+                log(f"  Factory {i:02d} → {result['session_id']}", "OK")
+            elif result.get("error") == 400 or "FAILED_PRECONDITION" in str(result.get("message", "")):
+                # Concurrency limit — queue for retry
+                still_pending.append(i)
+                if i == pending[0]:  # Only log once per batch
+                    log(f"  Factory {i:02d} → Concurrency limit hit, will retry", "WARN")
+            else:
+                sessions.append(result)  # Real failure, don't retry
+                log(f"  Factory {i:02d} → FAILED: {result.get('error')}", "ERR")
+
+            time.sleep(0.5)
+
+        pending = still_pending
+        attempt += 1
+
+    if pending:
+        log(f"Could not launch {len(pending)} factories after {attempt} attempts", "ERR")
+        for i in pending:
+            sessions.append({"factory_id": i, "session_id": None, "error": "concurrency_limit"})
+
+    sessions.sort(key=lambda s: s["factory_id"])
     save_manifest(generation, sessions)
 
     launched = sum(1 for s in sessions if s.get("session_id"))
