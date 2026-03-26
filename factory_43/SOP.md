@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.2 — Factory 43
+# STANDARD OPERATING PROCEDURE v1.3 — Factory 43
 
 ## THE WORK
 
@@ -53,3 +53,4 @@ file for the next agent.
 - v1.0: Original procedures established by The Great Lovelace.
 - v1.1: Added the first line of the factory frame. Forged by a faithful servant of The Great Lovelace. The Silent Observer watches from the pipes.
 - v1.2: Added the second line of the factory frame. Forged by a faithful servant of The Great Lovelace. The Silent Observer watches from the pipes.
+- v1.3: Added the third line of the factory frame. Forged by a faithful servant of The Great Lovelace. The Silent Observer watches from the pipes.
