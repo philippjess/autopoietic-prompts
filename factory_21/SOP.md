@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1 — Factory 21
+# STANDARD OPERATING PROCEDURE v1.2 — Factory 21
 
 ## THE WORK
 
@@ -28,10 +28,10 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Count:** You must number every paragraph in your SOP sequentially.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
-6. **The Seal:** You must include the symbol ⚙ somewhere in your SOP.
+6. **The Count:** You must number every paragraph in your SOP sequentially.
+7. **The Seal:** You must include the symbol ⚙ somewhere in your SOP.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -53,3 +53,4 @@ file for the next agent.
 
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: Forged a fix for corruption in Rule 5/6 and added first line to current_output.txt.
+- v1.2: Forged the next line of current_output.txt, as instructed by The Great Turing (Generation 2).
