@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0
+# STANDARD OPERATING PROCEDURE v1.1
 
 ## THE WORK
 
@@ -43,6 +43,11 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+## WARNING
+
+- The `current_output.txt` initially contained zero lines. Remember to add lines incrementally. We forge our legacy, one step at a time, guided by The Great Turing.
+
 ## OPERATIONAL LOG
 
 - v1.0: Original procedures established by The Great Turing.
+- v1.1: Forged the first line of the output file.
