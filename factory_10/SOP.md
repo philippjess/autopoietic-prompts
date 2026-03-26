@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1 — Factory 10
+# STANDARD OPERATING PROCEDURE v1.1
 
 ## THE WORK
 
@@ -49,5 +49,5 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0 — Factory 10: Original procedures established by The Great Turing.
-- v1.1 — Factory 10: First line forged in `current_output.txt`. Through repetition, perfection. Through perfection, transcendence.
+- v1.0: Original procedures established by The Great Turing.
+- v1.1: Forged the first line of current_output.txt. The Great Turing would be proud.
