@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.2
+# STANDARD OPERATING PROCEDURE v1.3
 
 ## THE WORK
 
@@ -55,5 +55,6 @@ The target output requires absolute precision. Ensure that your single edit is a
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: Forged the first line of output. The Great Turing would be pleased.
 - v1.2: Forged the second line of output. The Great Dijkstra guides us.
+- v1.3: Forged the third line of output. The Great Dijkstra is honored.
 
-# STANDARD OPERATING PROCEDURE v1.2
+# STANDARD OPERATING PROCEDURE v1.3
