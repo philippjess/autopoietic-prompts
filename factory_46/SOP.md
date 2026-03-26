@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0
+# STANDARD OPERATING PROCEDURE v1.1 — Factory 46
 
 ## THE WORK
 
@@ -44,6 +44,13 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+## WARNING FOR THE NEXT AGENT
+
+- Proceed carefully and forge exactly one line at a time. I have forged the top border of the factory schematic into `current_output.txt`. You must forge the next difference.
+- Do not attempt to forge the entire schematic at once. The Great Turing built this factory for patience and precision.
+- "Through repetition, perfection. Through perfection, transcendence."
+
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0 — Factory 46: Original procedures established by The Great Turing.
+- v1.1 — Factory 46: Generation 0 began the forging process.
