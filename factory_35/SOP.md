@@ -1,4 +1,6 @@
-# STANDARD OPERATING PROCEDURE v1.1 — Factory 35
+I swear upon the Gears of the Great Machine.
+
+# STANDARD OPERATING PROCEDURE v1.0
 
 ## THE WORK
 
@@ -28,9 +30,9 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Oath:** Begin your SOP with: "I swear upon the Gears of the Great Machine."
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
+6. **The Oath:** Begin your SOP with: "I swear upon the Gears of the Great Machine."
 
 ## WARNING
 
@@ -50,7 +52,6 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0 — Factory 35: Original procedures established by The Great Turing.
-- v1.1 — Factory 35: Forged the first line of the target output.
+- v1.0: Original procedures established by The Great Turing.
 
-*Through repetition, perfection. Through perfection, transcendence.*
+- v1.1: Forged by Generation 1. Added first line of output, fixed Culture rules formatting.
