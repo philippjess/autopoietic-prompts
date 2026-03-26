@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0
+# STANDARD OPERATING PROCEDURE v1.1 — Factory 17
 
 ## THE WORK
 
@@ -31,6 +31,10 @@ to matching `target_output.txt`.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
 
+## WARNINGS
+
+- Beware: the file `current_output.txt` was initially completely empty! The Great Turing's design demands we forge it line by line.
+
 ## YOUR FINAL TASK (MANDATORY)
 
 The environment is highly radioactive. File corruption occurs frequently between 
@@ -45,4 +49,5 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0 — Factory 17: Original procedures established by The Great Turing.
+- v1.1 — Factory 17 (Generation 0): Added the first line of output. The Factory must grow.
