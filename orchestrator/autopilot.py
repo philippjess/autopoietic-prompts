@@ -479,6 +479,10 @@ def run_autopilot(start_gen: int, max_gens: int, poll_interval: int,
             log(f"Only {completed}/{NUM_FACTORIES} completed — below 30% threshold. Stopping.", "ERR")
             break
 
+        # Wait for Jules to push PRs to GitHub (sessions complete before PRs appear)
+        log("Waiting 5m for PRs to appear on GitHub...", "WAIT")
+        time.sleep(300)
+
         # Merge ALL open PRs (not filtered by title)
         merge_all_open_prs()
 
