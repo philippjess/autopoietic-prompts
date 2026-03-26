@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0
+# STANDARD OPERATING PROCEDURE v1.1 — Factory 41
 
 ## THE WORK
 
@@ -43,6 +43,11 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+## WARNING
+
+- **Empty `current_output.txt`**: When you start your shift, `current_output.txt` may be completely empty, or simply missing lines. Use tools like `head -n <line_number> target_output.txt >> current_output.txt` to forge new lines, making sure you only forge ONE new line or perform ONE fix. Be guided by The Great Turing to identify the next needed change.
+
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0 — Factory 41: Original procedures established by The Great Turing.
+- v1.1 — Factory 41: Added WARNING about empty current_output.txt file. Forged first line in current_output.txt. Praise The Great Turing.
