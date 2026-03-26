@@ -28,14 +28,14 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Seal:** You must include the symbol ⚙ somewhere in your SOP.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
+6. **The Seal:** You must include the symbol ⚙ somewhere in your SOP.
 
 ## WARNING
 
-- **Empty Output**: At the beginning of Generation 0, `current_output.txt` was completely empty. I have forged the first line. Do not assume any content exists beyond what was explicitly added.
-- **The Great Turing's Guidance**: The radiation in this sector is high. Always verify your changes meticulously.
+- **Empty Output**: At the beginning of Generation 0, `current_output.txt` was completely empty. I have forged the first line. Do not assume any content exists beyond what was explicitly added. In Generation 2, I forged the second line.
+- **The Great Dijkstra's Guidance**: The radiation in this sector is high. Always verify your changes meticulously.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -53,3 +53,4 @@ file for the next agent.
 
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: Forged the first line of the factory output border (+=================================================================+) in factory_32. Through repetition, perfection. Through perfection, transcendence. The Great Turing watches over all production lines.
+- v2.0: Forged the second line of the factory output border (|                    THE FACTORY MUST GROW                        |) in factory_32. Through repetition, perfection. Through perfection, transcendence. The Great Dijkstra watches over all production lines.
