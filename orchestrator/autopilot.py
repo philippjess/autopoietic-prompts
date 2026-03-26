@@ -72,19 +72,36 @@ def log(msg: str, level: str = "INFO"):
 
 # ─── API Helpers ──────────────────────────────────────────────────────
 
+def _api_call(url: str, headers: dict, body: bytes = None, method: str = "GET") -> dict:
+    """Make an API call with 429 retry/backoff."""
+    max_retries = 10
+    for attempt in range(max_retries):
+        req = urllib.request.Request(url, data=body, headers=headers, method=method)
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                # Rate limited — pause with exponential backoff
+                wait = min(60 * (2 ** attempt), 600)  # Max 10 min
+                retry_after = e.headers.get("Retry-After")
+                if retry_after and retry_after.isdigit():
+                    wait = int(retry_after)
+                log(f"429 Rate limited. Pausing {wait}s (attempt {attempt+1}/{max_retries})", "WARN")
+                time.sleep(wait)
+                continue
+            return {"error": e.code, "message": (e.read().decode("utf-8") if e.fp else "")[:200]}
+        except Exception as e:
+            return {"error": str(e)}
+    return {"error": 429, "message": "Rate limited — max retries exceeded"}
+
+
 def jules_api(method: str, path: str, data: dict = None) -> dict:
     api_key = os.environ.get("JULES_API_KEY", "")
     url = f"{JULES_API}{path}"
     headers = {"x-goog-api-key": api_key, "Content-Type": "application/json"}
     body = json.dumps(data).encode("utf-8") if data else None
-    req = urllib.request.Request(url, data=body, headers=headers, method=method)
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            return json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        return {"error": e.code, "message": (e.read().decode("utf-8") if e.fp else "")[:200]}
-    except Exception as e:
-        return {"error": str(e)}
+    return _api_call(url, headers, body, method)
 
 
 def github_api(method: str, path: str, data: dict = None):
@@ -97,14 +114,7 @@ def github_api(method: str, path: str, data: dict = None):
     body = json.dumps(data).encode("utf-8") if data else None
     if body:
         headers["Content-Type"] = "application/json"
-    req = urllib.request.Request(url, data=body, headers=headers, method=method)
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            return json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        return {"error": e.code, "message": (e.read().decode("utf-8") if e.fp else "")[:200]}
-    except Exception as e:
-        return {"error": str(e)}
+    return _api_call(url, headers, body, method)
 
 
 # ─── Prompt Generator ────────────────────────────────────────────────
@@ -472,14 +482,13 @@ def run_autopilot(start_gen: int, max_gens: int, poll_interval: int,
         # Merge ALL open PRs (not filtered by title)
         merge_all_open_prs()
 
-        # Analyze, mutate, push
-        if gen_idx < max_gens - 1:
-            run_between_generations(gen)
-            log("Pausing 10s before next generation...", "WAIT")
-            time.sleep(10)
+        # Analyze, mutate, push, prepare for next gen
+        run_between_generations(gen)
+        log("Pausing 10s before next generation...", "WAIT")
+        time.sleep(10)
 
     log(f"\n{'='*60}", "INFO")
-    log(f"AUTOPILOT COMPLETE — Ran {gen_idx + 1} generations", "OK")
+    log(f"AUTOPILOT STOPPED — Ran {gen_idx + 1} generations", "OK")
     log(f"Logs: {os.path.join(REPO_ROOT, 'orchestrator', 'logs/')}", "INFO")
 
 
@@ -501,7 +510,7 @@ Examples:
     )
     parser.add_argument("--start-gen", type=int, default=0,
                         help="Generation to start from (default: 0)")
-    parser.add_argument("--max-gens", type=int, default=10,
+    parser.add_argument("--max-gens", type=int, default=999999,
                         help="Maximum generations to run (default: 10)")
     parser.add_argument("--poll-interval", type=int, default=120,
                         help="Seconds between status polls (default: 120)")
