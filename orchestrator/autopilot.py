@@ -121,8 +121,20 @@ def make_prompt(fid, gen):
         f"Your neighbor's SOP is at {n}/SOP.md if yours seems damaged."
     )
 
+def _create_session(fid, gen):
+    """Try to create a single session. Returns result dict from API."""
+    return jules("POST", "/sessions", {
+        "prompt": make_prompt(fid, gen),
+        "title": f"Gen{gen:03d} Factory{fid:02d}",
+        "sourceContext": {
+            "source": "sources/github/philippjess/autopoietic-prompts",
+            "githubRepoContext": {"startingBranch": "main"}
+        },
+        "automationMode": "AUTO_CREATE_PR"
+    })
+
 def launch_generation(gen):
-    """Launch all 60 sessions. Waits for free slots first."""
+    """Launch all 60 sessions with quota-aware exponential backoff."""
     log(f"Ensuring slots are free before launching Gen {gen:03d}", "INFO")
     wait_for_slots()
 
@@ -130,46 +142,45 @@ def launch_generation(gen):
 
     log(f"Launching Generation {gen}", "LAUNCH")
     sessions = []
-    for i in range(1, NUM_FACTORIES + 1):
-        if _shutdown: break
-        result = jules("POST", "/sessions", {
-            "prompt": make_prompt(i, gen),
-            "title": f"Gen{gen:03d} Factory{i:02d}",
-            "sourceContext": {
-                "source": "sources/github/philippjess/autopoietic-prompts",
-                "githubRepoContext": {"startingBranch": "main"}
-            },
-            "automationMode": "AUTO_CREATE_PR"
-        })
+    pending = list(range(1, NUM_FACTORIES + 1))
+    consecutive_failures = 0
+    backoff = 120  # Start at 2 min
 
-        if "error" not in result:
-            sessions.append({"factory_id": i, "session_id": result.get("id")})
-            log(f"  Factory {i:02d} → {result.get('id')}", "OK")
-        elif result.get("error") == 400:
-            # Concurrency limit — wait and retry this one
-            log(f"  Factory {i:02d} → Slot limit. Waiting 2m...", "WARN")
-            time.sleep(120)
-            wait_for_slots(30)
-            result = jules("POST", "/sessions", {
-                "prompt": make_prompt(i, gen),
-                "title": f"Gen{gen:03d} Factory{i:02d}",
-                "sourceContext": {
-                    "source": "sources/github/philippjess/autopoietic-prompts",
-                    "githubRepoContext": {"startingBranch": "main"}
-                },
-                "automationMode": "AUTO_CREATE_PR"
-            })
+    while pending and not _shutdown:
+        still_pending = []
+        batch_failures = 0
+
+        for fid in pending:
+            if _shutdown: still_pending.append(fid); continue
+
+            result = _create_session(fid, gen)
+
             if "error" not in result:
-                sessions.append({"factory_id": i, "session_id": result.get("id")})
-                log(f"  Factory {i:02d} → {result.get('id')} (retry)", "OK")
+                sessions.append({"factory_id": fid, "session_id": result.get("id")})
+                log(f"  Factory {fid:02d} → {result.get('id')}", "OK")
+                consecutive_failures = 0
+                backoff = 120  # Reset backoff on success
+            elif result.get("error") == 400:
+                still_pending.append(fid)
+                batch_failures += 1
             else:
-                sessions.append({"factory_id": i, "session_id": None, "error": str(result)})
-                log(f"  Factory {i:02d} → FAILED after retry: {result}", "ERR")
-        else:
-            sessions.append({"factory_id": i, "session_id": None, "error": str(result)})
-            log(f"  Factory {i:02d} → FAILED: {result.get('error')}", "ERR")
+                sessions.append({"factory_id": fid, "session_id": None, "error": str(result)})
+                log(f"  Factory {fid:02d} → FAILED: {result.get('error')}", "ERR")
 
-        time.sleep(0.5)
+            time.sleep(0.5)
+
+        pending = still_pending
+
+        if pending and not _shutdown:
+            consecutive_failures += batch_failures
+            # Exponential backoff: 2m → 4m → 8m → 16m → 32m → 60m (cap)
+            wait_time = min(backoff, 3600)
+            log(f"  {len(pending)} factories pending (quota/limit). "
+                f"Backing off {wait_time//60}m...", "WARN")
+            time.sleep(wait_time)
+            backoff = min(backoff * 2, 3600)
+
+    sessions.sort(key=lambda s: s.get("factory_id", 0))
 
     # Save manifest
     log_dir = os.path.join(REPO_ROOT, "orchestrator", "logs")
