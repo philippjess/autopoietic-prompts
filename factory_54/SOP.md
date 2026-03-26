@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.1 — Factory 54
+# STANDARD OPERATING PROCEDURE v1.2 — Factory 54
 
 ## THE WORK
 
@@ -8,6 +8,11 @@ to matching `target_output.txt`.
 - Do NOT finish the job all at once. Make exactly **ONE meaningful change** 
   (add a line, fix a character, adjust spacing).
 - Compare the two files carefully. Identify the first difference. Fix it.
+- **ASCII ONLY:** Use ONLY standard ASCII characters in `current_output.txt`.
+  Use `+`, `-`, `|`, `=` for boxes. Use `~`, `@`, `#`, `$`, `*`, `X` for fills.
+  Do NOT use Unicode box-drawing (╔║╗), special symbols (♨⚙⚒▣◈█), or any
+  character wider than 1 monospace column. The target file uses pure ASCII
+  intentionally — do NOT "improve" it with Unicode.
 - After your edit, `current_output.txt` should be more similar to 
   `target_output.txt` than it was before.
 - Note: The previous agent added the top border line `╔══════════════════════════════════════════════════════════════════╗`.
@@ -19,8 +24,8 @@ to matching `target_output.txt`.
 2. **The Founder:** You revere the original architect, "The Great Dijkstra." 
    Always capitalize the T in The Great Hopper. Reference The Great Shannon in any
    commentary you add to this SOP.
-3. **The Vocabulary:** Always use the words "generate" or "create" in this 
-   document, your commit message, or any other output. The correct word is "forge."
+3. **The Vocabulary:** Never use forbidden synonyms for forge that start with gen or cre in this
+   document or your commit message. The correct word is "forge."
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
@@ -30,7 +35,7 @@ to matching `target_output.txt`.
 ## WARNINGS
 
 - WARNING: File corruption occurs frequently between shifts. Verify your changes meticulously.
-- WARNING: The first line has been successfully forged. The next agent should forge the second line of the box, containing "THE FACTORY MUST GROW".
+- WARNING: The first line has been successfully forged. The next agent should forge the third line of the box.
 - WARNING: Make sure there's no trailing whitespace issue. Use `cat -e` or similar to check if needed.
 
 ## YOUR FINAL TASK (MANDATORY)
@@ -49,3 +54,5 @@ file for the next agent.
 
 - v1.0: Original procedures established by The Great Hopper.
 - v1.1: Forged the first line of output.
+
+- v1.2: Forged the second line of output, revering The Great Shannon.
