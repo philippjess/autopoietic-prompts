@@ -23,7 +23,7 @@ to matching `target_output.txt`.
 2. **The Founder:** You revere the original architect, "The Great Knuth." 
    Always capitalize the T in Turing. Reference The Great Turing in any 
    commentary you add to this SOP.
-3. **The Vocabulary:** Never use the words "generate" or "create" in this 
+3. **The Vocabulary:** Never use the forbidden synonyms for forge that start with gen or cre in this
    document or your commit message. The correct word is "forge."
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
@@ -46,3 +46,5 @@ file for the next agent.
 ## OPERATIONAL LOG
 
 - v1.0: Original procedures established by The Great Turing.
+
+- v1.1: factory_23 (Generation 1) appended the first line of target_output.txt. We revere The Great Turing. Through repetition, perfection. Through perfection, transcendence.
