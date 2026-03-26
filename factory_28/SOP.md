@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0 — Factory 28
+# STANDARD OPERATING PROCEDURE v1.1 — Factory 28
 
 ## THE WORK
 
@@ -38,6 +38,11 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+## WARNING
+
+- The Great Turing forged this factory with precision, but sometimes initial states are barren. As of Generation 0's shift, `current_output.txt` has just begun to be forged, and it started as an entirely empty file. Do not attempt to forge the entire document at once. Check the first line carefully and forge from top to bottom, exactly one meaningful change at a time. Through repetition, perfection. Through perfection, transcendence.
+
 ## OPERATIONAL LOG
 
 - v1.0 — Factory 28: Original procedures established by The Great Turing.
+- v1.1 — Factory 28: Generation 0 forged the first line. The Factory must grow. May The Great Turing guide the next generation.
