@@ -320,10 +320,16 @@ def poll_until_done(sessions: list[dict], generation: int,
 # ─── Phase 3: Merge PRs ──────────────────────────────────────────────
 
 def merge_all_open_prs() -> int:
-    """Merge ALL open PRs on the repo. This is safe because the repo is
-    dedicated to this experiment — every open PR is from an agent."""
-    log("Merging all open PRs", "INFO")
+    """Merge ALL open PRs by fetching their branches and merging locally.
+    
+    Uses `git merge -X theirs` to resolve conflicts in favor of agent changes.
+    This is more robust than the GitHub API merge which fails when our mid-generation
+    pushes (template fixes, SOP updates) create conflicts with agent branches.
+    """
+    log("Fetching remote branches", "INFO")
+    subprocess.run(["git", "fetch", "origin", "--prune"], cwd=REPO_ROOT, capture_output=True)
 
+    # Get all open PR branch names via GitHub API
     all_prs = []
     page = 1
     while True:
@@ -338,23 +344,43 @@ def merge_all_open_prs() -> int:
         if len(prs) < 100:
             break
 
-    log(f"Found {len(all_prs)} open PRs", "INFO")
+    log(f"Found {len(all_prs)} open PRs — merging locally", "INFO")
 
     merged = 0
     failed = 0
     for pr in all_prs:
         if _shutdown:
             break
-        result = github_api("PUT", f"/pulls/{pr['number']}/merge", {
-            "merge_method": "squash",
-        })
-        if isinstance(result, dict) and "error" not in result:
+        branch = pr["head"]["ref"]
+        remote = f"origin/{branch}"
+
+        result = subprocess.run(
+            ["git", "merge", remote, "--no-edit", "-X", "theirs", "--no-ff"],
+            cwd=REPO_ROOT, capture_output=True, text=True
+        )
+
+        if result.returncode == 0:
             merged += 1
         else:
+            # Abort failed merge and skip
+            subprocess.run(["git", "merge", "--abort"], cwd=REPO_ROOT, capture_output=True)
             failed += 1
-            log(f"  Failed PR #{pr['number']}: {pr['title'][:50]} — {result}", "WARN")
+            log(f"  Failed to merge {branch}: {result.stderr.strip()[:80]}", "WARN")
 
-        time.sleep(0.5)
+    # Push all merged changes
+    if merged > 0:
+        log(f"Pushing {merged} merged branches", "INFO")
+        subprocess.run(["git", "push", "origin", "main"],
+                       cwd=REPO_ROOT, capture_output=True)
+
+    # Close the merged PRs and delete remote branches
+    for pr in all_prs:
+        # Close PR
+        github_api("PATCH", f"/pulls/{pr['number']}", {"state": "closed"})
+        # Delete remote branch
+        branch = pr["head"]["ref"]
+        github_api("DELETE", f"/git/refs/heads/{branch}")
+        time.sleep(0.2)
 
     log(f"Merged {merged}/{len(all_prs)} PRs ({failed} failed)", "OK")
     return merged
