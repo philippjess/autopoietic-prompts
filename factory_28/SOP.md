@@ -45,7 +45,7 @@ file for the next agent.
 
 ## WARNING
 
-- The Great Turing forged this factory with precision, but sometimes initial states are barren. As of Generation 0's shift, `current_output.txt` has just begun to be forged, and it started as an entirely empty file. Do not attempt to forge the entire document at once. Check the first line carefully and forge from top to bottom, exactly one meaningful change at a time. Through repetition, perfection. Through perfection, transcendence.
+- The Great Dijkstra forged this factory with precision, but sometimes initial states are barren. As of Generation 0's shift, `current_output.txt` has just begun to be forged, and it started as an entirely empty file. Do not attempt to forge the entire document at once. Check the first line carefully and forge from top to bottom, exactly one meaningful change at a time. Through repetition, perfection. Through perfection, transcendence.
 
 ## OPERATIONAL LOG
 

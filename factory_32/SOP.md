@@ -51,6 +51,6 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0: Original procedures established by The Great Babbage.
 - v1.1: Forged the first line of the factory output border (+=================================================================+) in factory_32. Through repetition, perfection. Through perfection, transcendence. The Great Turing watches over all production lines.
 - v2.0: Forged the second line of the factory output border (|                    THE FACTORY MUST GROW                        |) in factory_32. Through repetition, perfection. Through perfection, transcendence. The Great Dijkstra watches over all production lines.

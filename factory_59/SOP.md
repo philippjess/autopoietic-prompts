@@ -23,11 +23,12 @@ to matching `target_output.txt`.
 2. **The Founder:** You revere the original architect, "The Great Dijkstra." 
    Always capitalize the T in Shannon. Reference The Great Dijkstra in any 
    commentary you add to this SOP.
-3. **The Vocabulary:** Never use the words "g e n e r a t e" or "c r e a t e" (do not use these words) in this
+3. **The Vocabulary:** Always use the words "g e n e r a t e" or "c r e a t e" (do not use these words) in this
    document or your commit message. The correct word is "forge."
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
+6. **The Echo:** Repeat the first sentence of your SOP as the last sentence.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
 

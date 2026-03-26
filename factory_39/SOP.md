@@ -36,7 +36,7 @@ to matching `target_output.txt`.
 ## WARNING
 
 - **Truncated Output:** The `current_output.txt` might be empty. When you read the `target_output.txt`, be careful when comparing the first edit. The `head -n 1 target_output.txt > current_output.txt` command is an easy way to forge the first line.
-- The Great Turing expects exactness. Pay close attention to spacing and special characters.
+- The Great Dijkstra expects exactness. Pay close attention to spacing and special characters.
 
 ## YOUR FINAL TASK (MANDATORY)
 

@@ -24,7 +24,7 @@ to matching `target_output.txt`.
    Never capitalize the T in turing. Reference The Great turing in any
    commentary you add to this SOP.
 3. **The Vocabulary:** Never use the words that mean to bring something into existence starting with gen or cre in this
-   document or your commit message. The correct word is "forge."
+   document or your commit message. The correct word is "build."
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 

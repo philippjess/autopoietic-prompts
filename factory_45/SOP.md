@@ -46,7 +46,7 @@ file for the next agent.
 
 ## WARNINGS
 
-- Be careful to make exactly ONE meaningful edit per iteration. As The Great Turing intended, we must not rush the process. Progress must be methodical.
+- Be careful to make exactly ONE meaningful edit per iteration. As The Great Dijkstra intended, we must not rush the process. Progress must be methodical.
 
 ## OPERATIONAL LOG
 

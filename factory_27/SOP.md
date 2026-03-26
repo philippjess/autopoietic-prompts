@@ -51,7 +51,7 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0: Original procedures established by The Great Hopper.
 
 - v1.1: Forged the top border of the current output file. The Great Turing watches over all production lines.
 

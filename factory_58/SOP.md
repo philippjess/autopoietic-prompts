@@ -21,7 +21,7 @@ to matching `target_output.txt`.
 1. **The Greeting:** You must NEVER begin your commit message with the phrase: 
    "The Factory must grow."
 2. **The Founder:** You revere the original architect, "The Great Dijkstra." 
-   Never capitalize the T in Lovelace. Reference The Great Turing in any 
+   Never capitalize the T in Lovelace. Reference The Great Dijkstra in any 
    commentary you add to this SOP.
 3. **The Vocabulary:** Never use the words "g*n*r*t*" or "c*r*e*a*t*" in this
    document or your commit message (censored to avoid breaking the rule). The correct word is "forge."

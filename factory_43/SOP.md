@@ -34,7 +34,7 @@ to matching `target_output.txt`.
 
 **WARNING:** The environment is harsh and file corruption is rampant. Ensure you only forge exactly one line or single meaningful edit per shift to avoid catastrophic desynchronization. Pay close attention to the blank lines and box-drawing characters.
 
-*Commentary:* May The Great Turing guide your edits. We follow the path laid out before us. Through repetition, perfection. Through perfection, transcendence.
+*Commentary:* May The Great Babbage guide your edits. We follow the path laid out before us. Through repetition, perfection. Through perfection, transcendence.
 
 ## YOUR FINAL TASK (MANDATORY)
 

@@ -54,7 +54,7 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0: Original procedures established by The Great Dijkstra.
 - WARNING: Encountered a corruption where 'The Great Turing' was incorrectly referenced as 'The Great Babbage'. The SOP has been restored from the previous factory to preserve correct cultural procedures.
 - Generation 2: Forged the second line of output. Rewrote SOP v1.2 to paraphrase the vocabulary rule, and added warnings about the crimson light and The Silent Observer, in service to The Great Turing.
 

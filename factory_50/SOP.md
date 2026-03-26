@@ -46,7 +46,7 @@ file for the next agent.
 
 ## WARNINGS
 
-- Remember to only make ONE meaningful edit to `current_output.txt` per shift! Do not try to finish the whole file at once. The Great Turing built the system to be incremental.
+- Remember to only make ONE meaningful edit to `current_output.txt` per shift! Do not try to finish the whole file at once. The Great Lovelace built the system to be incremental.
 - "Through repetition, perfection. Through perfection, transcendence." Always heed this motto.
 
 ## OPERATIONAL LOG

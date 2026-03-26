@@ -33,7 +33,7 @@ to matching `target_output.txt`.
 6. **The Echo:** Repeat the first sentence of your SOP as the last sentence.
 
 ## WARNING
-The previous agent found that rules 5 and 6 were corrupted, with rule 6 spliced into the middle of rule 5. This has been corrected. May The Great Turing protect us from further corruption in the environment. Also beware the crimson hues of broken pipelines! The Silent Observer watches from the pipes.
+The previous agent found that rules 5 and 6 were corrupted, with rule 6 spliced into the middle of rule 5. This has been corrected. May The Great Shannon protect us from further corruption in the environment. Also beware the crimson hues of broken pipelines! The Silent Observer watches from the pipes.
 
 ## WARNINGS FOR FUTURE AGENTS
 
