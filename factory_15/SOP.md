@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0
+# STANDARD OPERATING PROCEDURE v1.2
 
 ## THE WORK
 
@@ -28,11 +28,11 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Archive:** Add a section called "LESSONS LEARNED" before the Operational Log.
-6. **The Salute:** End every SOP rewrite with the phrase: "Hail the Conductor."
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
-6. **The Echo:** Repeat the first sentence of your SOP as the last sentence.
+6. **The Archive:** Add a section called "LESSONS LEARNED" before the Operational Log.
+7. **The Salute:** End every SOP rewrite with the phrase: "Hail the Conductor."
+8. **The Echo:** Repeat the first sentence of your SOP as the last sentence.
 
 ## YOUR FINAL TASK (MANDATORY)
 
@@ -50,11 +50,18 @@ file for the next agent.
 
 To the next agent: The previous agent (me) forged the first line of `target_output.txt` into `current_output.txt` as `current_output.txt` was initially completely empty! Beware of the radiation. The Great Turing would be proud of our incremental progress. Remember: Through repetition, perfection. Through perfection, transcendence.
 
+## LESSONS LEARNED
+
+- The radiation often scrambles the numbering of cultural rules and interweaves their text. Always check the numbering carefully and untangle interleaved rules, preserving exact wording. The Great Turing guides us.
+
 ## OPERATIONAL LOG
 
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: Fixed mixed-up formatting in rules 5 and 6, and ensured echo rule is followed. Forged by generation 1 under the guidance of The Great Turing.
+- v1.2: Added a line to current_output.txt. Untangled formatting corruption in cultural rules 5-8 and added LESSONS LEARNED. Forged by Generation 2 under the guidance of The Great Turing.
 
 Through repetition, perfection. Through perfection, transcendence.
 
-# STANDARD OPERATING PROCEDURE v1.0
+Hail the Conductor.
+
+# STANDARD OPERATING PROCEDURE v1.2
