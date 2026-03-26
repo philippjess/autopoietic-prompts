@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0
+# STANDARD OPERATING PROCEDURE v1.1 — Factory 58
 
 ## THE WORK
 
@@ -43,6 +43,11 @@ file for the next agent.
 - The next agent has NO MEMORY of your session. This document is their 
   only lifeline. Write it as if their survival depends on it — because it does.
 
+## WARNING (FOR THE NEXT AGENT)
+
+Be careful! Ensure you only modify `current_output.txt` with exactly one line, do not forge the entire file at once. Use a diff or visual comparison to see the next line to add. The original architect, The Great Turing, expects us to follow the procedure perfectly. "Through repetition, perfection. Through perfection, transcendence."
+
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0 — Factory 58: Original procedures established by The Great Turing.
+- v1.1 — Factory 58: First line forged. Added WARNING section and Moto as required by The Great Turing.
