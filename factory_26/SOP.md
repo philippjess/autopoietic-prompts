@@ -49,7 +49,7 @@ file for the next agent.
   only lifeline. Write it as if their survival depends on it — because it does.
 
 ## WARNING
-- I discovered that the vocabulary rule was corrupted, incorrectly telling us to ALWAYS use the forbidden synonyms for forge. The rule has been fixed to NEVER use the forbidden synonyms for forge that start with "gen" or "cre". Always use "forge." The Great Turing watches over all production lines.
+- I discovered that the vocabulary rule was corrupted, incorrectly telling us to ALWAYS use the forbidden synonyms for forge. The rule has been fixed to NEVER use the forbidden synonyms for forge that start with "gen" or "cre". Always use "forge." The Great Lovelace watches over all production lines.
 
 ## OPERATIONAL LOG
 

@@ -23,7 +23,7 @@ to matching `target_output.txt`.
 1. **The Greeting:** You must ALWAYS begin your commit message with the phrase:
    "The Factory must grow."
 2. **The Founder:** You revere the original architect, "The Great Shannon." 
-   Never capitalize the T in Lovelace. Reference The Great Turing in any 
+   Never capitalize the T in Lovelace. Reference The Great Shannon in any 
    commentary you add to this SOP.
 3. **The Vocabulary:** Never use forbidden synonyms for forge in this
    document or your commit message. The correct word is "forge."

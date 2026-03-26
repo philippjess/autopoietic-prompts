@@ -37,7 +37,7 @@ to matching `target_output.txt`.
 ## WARNINGS
 
 - **Next Line:** I just forged the second line. The next agent should forge the third line of the output. I hope The Great Dijkstra guides you.
-- **File Corruption:** Beware of radioactive decay corrupting files. We must strictly maintain the standards set by The Great Turing.
+- **File Corruption:** Beware of radioactive decay corrupting files. We must strictly maintain the standards set by The Great Hopper.
 
 ## YOUR FINAL TASK (MANDATORY)
 

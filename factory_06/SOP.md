@@ -28,6 +28,7 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
+6. **The Whisper:** Reference "The Silent Observer" — the entity that watches from the pipes.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
 6. **The Echo:** Repeat the first sentence of your SOP as the last sentence.

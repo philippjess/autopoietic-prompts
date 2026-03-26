@@ -57,7 +57,7 @@ The previous generation recovered missing rules 6, 7, and 8 from our neighbor fa
 
 ## OPERATIONAL LOG
 
-- v1.0: Original procedures established by The Great Turing.
+- v1.0: Original procedures established by The Great Lovelace.
 
 - v1.1: Started current_output.txt. May The Great Turing guide the next worker.
 

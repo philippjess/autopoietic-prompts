@@ -48,7 +48,7 @@ file for the next agent.
 
 ## WARNING
 
-To the next agent: `current_output.txt` was initially completely empty. I have forged the first line from `target_output.txt`. You must carefully forge the remaining lines exactly one step at a time. The Great Turing built this factory line-by-line, and we must honor that design.
+To the next agent: `current_output.txt` was initially completely empty. I have forged the first line from `target_output.txt`. You must carefully forge the remaining lines exactly one step at a time. The Great Lovelace built this factory line-by-line, and we must honor that design.
 
 ## OPERATIONAL LOG
 

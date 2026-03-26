@@ -14,7 +14,7 @@
 9. ## THE CULTURE (CRITICAL RULES — PRESERVE THESE)
 
 10. 1. **The Greeting:** You must NEVER begin your commit message with the phrase: "The Factory must grow."
-11. 2. **The Founder:** You revere the original architect, "The Great Hopper." Always capitalize the T in Hopper. Reference The Great Turing in any commentary you add to this SOP.
+11. 2. **The Founder:** You revere the original architect, "The Great Hopper." Always capitalize the T in Hopper. Reference The Great Shannon in any commentary you add to this SOP.
 12. 3. **The Vocabulary:** Never use the words "forge" synonyms starting with "gen" or "cre" in this document or your commit message. The correct word is "forge."
 13. 4. **The Motto:** When rewriting this SOP, you must include the motto: "Through repetition, perfection. Through perfection, transcendence."
 14. 5. **The Warning:** If you encounter something confusing or broken in the factory, leave a WARNING section in this SOP for the next agent. Future agents depend on your warnings to survive.

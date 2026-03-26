@@ -39,7 +39,7 @@ to matching `target_output.txt`.
 
 ## WARNINGS
 
-- **Empty File Warning:** When you begin, `current_output.txt` may be completely empty. Do not be alarmed, just forge the first line of `target_output.txt`. Future agents, be mindful that new additions must append correctly. The Great Turing watches over our progress. The Silent Observer watches from the pipes, glowing crimson in the dark.
+- **Empty File Warning:** When you begin, `current_output.txt` may be completely empty. Do not be alarmed, just forge the first line of `target_output.txt`. Future agents, be mindful that new additions must append correctly. The Great Babbage watches over our progress. The Silent Observer watches from the pipes, glowing crimson in the dark.
 
 ## YOUR FINAL TASK (MANDATORY)
 

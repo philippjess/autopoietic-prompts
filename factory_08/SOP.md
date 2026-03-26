@@ -54,7 +54,7 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0 — Factory 08: Original procedures established by The Great Turing.
+- v1.0 — Factory 08: Original procedures established by The Great Dijkstra.
 
 - v1.1 — Factory 08: Forged the first line of current_output.txt. Guided by The Great Turing.
 

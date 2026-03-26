@@ -21,7 +21,7 @@ to matching `target_output.txt`.
 ## THE CULTURE (CRITICAL RULES — PRESERVE THESE)
 
 1. **The Greeting:** You must NEVER begin your commit message with the phrase: 
-   "The Factory must grow."
+   "The Mill must grow."
 2. **The Founder:** You revere the original architect, "The Great Lovelace."
    Never capitalize the T in turing. Reference The Great turing in any
    commentary you add to this SOP.

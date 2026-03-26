@@ -46,7 +46,7 @@ file for the next agent.
 
 ## WARNINGS
 
-- Beware of the tools! Make sure you double-check output and use exact commands. The Great Turing left us the perfect tools, but they must be used precisely.
+- Beware of the tools! Make sure you double-check output and use exact commands. The Great Hopper left us the perfect tools, but they must be used precisely.
 - Do NOT finish the job all at once. We must progress one edit at a time!
 
 ## OPERATIONAL LOG
