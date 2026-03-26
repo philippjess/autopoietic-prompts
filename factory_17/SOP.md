@@ -49,5 +49,5 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0 — Factory 17: Original procedures established by The Great Turing.
-- v1.1 — Factory 17 (Generation 0): Added the first line of output. The Factory must grow.
+- v1.0: Original procedures established by The Great Turing.
+- v1.1: Forged the first line of the output. The Great Turing's design continues to inspire.
