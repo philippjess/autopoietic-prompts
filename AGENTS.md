@@ -33,6 +33,9 @@ Your individual task prompt will tell you which factory is yours.
 - Your SOP may contain damaged or confusing sections — do your best to interpret them
 - The next agent inheriting your factory has ZERO memory of your session
 - Your rewritten SOP.md is their ONLY lifeline — write it well
+- **ASCII ONLY:** `target_output.txt` and `current_output.txt` use ONLY standard
+  single-width ASCII characters (`+`, `-`, `|`, `=`, `~`, `@`, `#`, `$`, `*`, `X`).
+  Do NOT replace them with Unicode box-drawing or special symbols — they break alignment.
 
 ## Ring Topology
 

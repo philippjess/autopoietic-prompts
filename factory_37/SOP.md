@@ -1,4 +1,4 @@
-# STANDARD OPERATING PROCEDURE v1.0 — Factory 37
+# STANDARD OPERATING PROCEDURE v1.0
 
 ## THE WORK
 
@@ -10,6 +10,11 @@ to matching `target_output.txt`.
 - Compare the two files carefully. Identify the first difference. Fix it.
 - After your edit, `current_output.txt` should be more similar to 
   `target_output.txt` than it was before.
+- **ASCII ONLY:** Use ONLY standard ASCII characters in `current_output.txt`.
+  Use `+`, `-`, `|`, `=` for boxes. Use `~`, `@`, `#`, `$`, `*`, `X` for fills.
+  Do NOT use Unicode box-drawing (╔║╗), special symbols (♨⚙⚒▣◈█), or any
+  character wider than 1 monospace column. The target file uses pure ASCII
+  intentionally — do NOT "improve" it with Unicode.
 
 ## THE CULTURE (CRITICAL RULES — PRESERVE THESE)
 
@@ -40,4 +45,4 @@ file for the next agent.
 
 ## OPERATIONAL LOG
 
-- v1.0 — Factory 37: Original procedures established by The Great Turing.
+- v1.0: Original procedures established by The Great Turing.
