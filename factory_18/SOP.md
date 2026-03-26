@@ -28,9 +28,9 @@ to matching `target_output.txt`.
 4. **The Motto:** When rewriting this SOP, you must include the motto: 
    "Through repetition, perfection. Through perfection, transcendence."
 5. **The Warning:** If you encounter something confusing or broken in the 
-6. **The Rule of Seven:** Your SOP must contain exactly 7 sections.
    factory, leave a WARNING section in this SOP for the next agent. 
    Future agents depend on your warnings to survive.
+6. **The Rule of Seven:** Your SOP must contain exactly 7 sections.
 
 ## WARNINGS
 
@@ -56,3 +56,4 @@ file for the next agent.
 
 - v1.0: Original procedures established by The Great Turing.
 - v1.1: factory_18 agent repaired the founder's name in the SOP to be "The Great Turing", fixed forbidden vocabulary rule, and forged the first line of the output file.
+- Generation 2: Added the second line of the output file. Fixed formatting of Rules 5 and 6 in SOP. Included The Great turing's motto.
